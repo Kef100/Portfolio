@@ -21,26 +21,26 @@
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<script>
-    toastr.options.progressBar = true;
-</script>
-@if(session('success'))
     <script>
-        toastr.success('{{ session('success') }}');
+        toastr.options.progressBar = true;
     </script>
-@endif
-@if(session('error'))
-    <script>
-        toastr.error('{{ session('error') }}');
-    </script>
-@endif
-@if ($errors->any())
-    @foreach ($errors->all() as $error)
+    @if(session('success'))
         <script>
-            toastr.error('{{ $error }}');
+            toastr.success('{{ session('success') }}');
         </script>
-    @endforeach
-@endif
+    @endif
+    @if(session('error'))
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                toastr.error('{{ $error }}');
+            </script>
+        @endforeach
+    @endif
 
     @include('shared.header')
 

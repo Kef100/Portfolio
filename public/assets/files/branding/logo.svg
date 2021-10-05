@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Logo" transform="translate(-281.246 -42.246)">
+    <g id="line" class="cls-1" transform="translate(281.246 42.246)">
+      <rect class="cls-3" width="70" height="70"/>
+      <rect class="cls-4" x="0.75" y="0.75" width="68.5" height="68.5"/>
+    </g>
+    <line id="inside_line" data-name="inside line" class="cls-1" y1="66.722" x2="68.005" transform="translate(282.599 43.599)"/>
+    <path id="K" class="cls-2" d="M5-6.281,3.349-4.564V0H1.568V-13.508H3.349v6.68l6-6.68H11.5L6.188-7.542,11.921,0H9.788Z" transform="translate(287.246 62.246)"/>
+    <path id="V" class="cls-2" d="M6.04-2.366,9.9-13.508h1.948L6.837,0H5.26l-5-13.508H2.2Z" transform="translate(333.246 105.246)"/>
+  </g>
+</svg>

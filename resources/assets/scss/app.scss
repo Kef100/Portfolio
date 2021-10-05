@@ -1,6 +1,129 @@
-*{
+$background-color: #222222;
+$primary-color: #857852;
+$accent-color: #444444;
+$white: #FFFFFF;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Corbel", sans-serif;
 }
+
+body {
+    background-color: $background-color;
+    color: $white;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+
+#preloader {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+
+        .logo {
+            padding-top: 3rem;
+            position: fixed;
+        }
+
+        .preloader-group{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-rows: 7fr 1fr 1fr;
+
+            .loader-container {
+                display: flex;
+                position: relative;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+
+                .background {
+                    position: relative;
+                    z-index: 1;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                .lines {
+                    position: fixed;
+                    z-index: 2;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                .shapes {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 1.5rem;
+                    align-items: center;
+                    position: fixed;
+                    z-index: 3;
+                    pointer-events: none;
+                    user-select: none;
+
+                    div {
+                        display: flex;
+                        align-content: center;
+                        justify-content: center;
+                    }
+
+                    .triangle img {
+                        animation: rotateShape 2s infinite alternate;
+                    }
+
+                    .square img {
+                        animation: rotateShape 2s infinite 0.5s alternate;
+                    }
+
+                    .rectangle img {
+                        animation: rotateShape 2s infinite 1s alternate;
+                    }
+
+                    .circle img {
+                        animation: rotateShape 2s infinite 1.5s alternate;
+                    }
+                }
+            }
+
+            .progress {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+                .bar {
+                    width: 30%;
+                    height: 0.33rem;
+                    background-color: $accent-color;
+                    border-radius: 25px;
+                }
+
+                .percentage {
+                    width: 0%;
+                    background-color: $primary-color;
+                    height: 100%;
+                    border-radius: 25px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotateShape {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+//div -> svg -> z-index (bg -> lines -> shapes)

@@ -11,6 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/assets/js')
-    .vue()
-    .sass('resources/assets/scss/app.scss', 'public/assets/css');
+mix.options(
+    {
+    processCssUrls: false,
+    }
+    ).js('resources/assets/js/app.js', 'public/assets/js/app.js')
+    .js('resources/assets/js/preloader.js', 'public/assets/js/preloader.js')
+    .sass('resources/assets/scss/app.scss', 'public/assets/css')
+    .copy('resources/assets/files', 'public/assets/files')
+    .version()
+    .disableNotifications();
