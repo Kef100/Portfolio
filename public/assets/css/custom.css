@@ -1,0 +1,220 @@
+* {
+  font-family: "Corbel", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.button span #first {
+  -webkit-animation: morph 1.25s ease infinite;
+          animation: morph 1.25s ease infinite;
+}
+.button span #middle {
+  -webkit-animation: morph 1.25s 0.25s ease infinite;
+          animation: morph 1.25s 0.25s ease infinite;
+}
+.button span #last {
+  -webkit-animation: morph 1.25s 0.5s ease infinite;
+          animation: morph 1.25s 0.5s ease infinite;
+}
+
+@-webkit-keyframes morph {
+  0% {
+    r: 3;
+  }
+  30% {
+    r: 4.5;
+  }
+  60% {
+    r: 3;
+  }
+  100% {
+    r: 3;
+  }
+}
+
+@keyframes morph {
+  0% {
+    r: 3;
+  }
+  30% {
+    r: 4.5;
+  }
+  60% {
+    r: 3;
+  }
+  100% {
+    r: 3;
+  }
+}
+.fixed-header {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+header nav .roll-link {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -ms-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+header nav .roll-link:hover {
+  text-decoration: none;
+}
+header nav .roll-link span {
+  display: block;
+  position: relative;
+  padding: 0 2px;
+  transition: all 400ms ease;
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+}
+header nav .roll-link:hover span {
+  background: transparent;
+  transform: translate3d(0px, 0px, -30px) rotateX(92deg);
+}
+header nav .roll-link span:after {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 2px;
+  color: white;
+  background: transparent;
+  transform-origin: 50% 0%;
+  transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+}
+
+#preloader {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#preloader .preloader-group {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 3fr 1fr;
+}
+#preloader .preloader-group .loader-container {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#preloader .preloader-group .loader-container .background {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: scale(1.4);
+}
+#preloader .preloader-group .loader-container .lines {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: scale(1.4);
+}
+#preloader .preloader-group .loader-container .logo {
+  position: fixed;
+  z-index: 3;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: scale(1.6);
+}
+#preloader .preloader-group .loader-container .bottom-center-circle {
+  position: fixed;
+  z-index: 4;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#preloader .preloader-group .loader-container .top-center-circle {
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#preloader .preloader-group .loader-container .top-center-circle svg {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  stroke-dasharray: 80 1000;
+  stroke-linecap: round;
+}
+#preloader .preloader-group .progress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#preloader .preloader-group .progress .bar {
+  width: 40%;
+  height: 0.4rem;
+  border-radius: 25px;
+}
+#preloader .preloader-group .progress .percentage {
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+}
+#preloader .preloader-group .progress svg #first {
+  -webkit-animation: morph 1.25s ease infinite;
+          animation: morph 1.25s ease infinite;
+}
+#preloader .preloader-group .progress svg #middle {
+  -webkit-animation: morph 1.25s 0.25s ease infinite;
+          animation: morph 1.25s 0.25s ease infinite;
+}
+#preloader .preloader-group .progress svg #last {
+  -webkit-animation: morph 1.25s 0.5s ease infinite;
+          animation: morph 1.25s 0.5s ease infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
