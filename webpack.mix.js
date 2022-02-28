@@ -15,9 +15,15 @@ mix.options(
     {
     processCssUrls: false,
     }
-    ).js('resources/assets/js/app.js', 'public/assets/js/app.js')
-    .js('resources/assets/js/preloader.js', 'public/assets/js/preloader.js')
-    .sass('resources/assets/scss/app.scss', 'public/assets/css')
+    ).scripts(
+      [
+          'resources/assets/js/navbar-scroll.js',
+        ], 'public/assets/js/app.js')
+    .js('resources/assets/js/preloader.js','public/assets/js/preloader.js')
+    .postCss('resources/assets/scss/app.css', 'public/assets/css', [
+        require("tailwindcss"),
+    ])
+    .sass('resources/assets/scss/custom.scss', 'public/assets/css')
     .copy('resources/assets/files', 'public/assets/files')
     .version()
     .disableNotifications();

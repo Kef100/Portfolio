@@ -19,8 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-secondary-500 text-white">
     <script>
         toastr.options.progressBar = true;
     </script>
@@ -41,6 +42,8 @@
             </script>
         @endforeach
     @endif
+
+    @include('shared.preloader')
 
     @include('shared.header')
 
