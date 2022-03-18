@@ -7,7 +7,14 @@ module.exports = {
       "./resources/**/*.vue",
   ],
   theme: {
+      container: {
+      maxWidth: "95%",
+          margin: "0 auto",
+  },
     extend: {
+        width: {
+            '20': '4rem',
+        },
         colors: {
             'primary': {
                 DEFAULT: '#857852',

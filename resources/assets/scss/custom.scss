@@ -9,46 +9,9 @@ html {
     scroll-behavior: smooth;
 }
 
-///////////////////////////
-//////////Container////////
-///////////////////////////
-.container {
+.container{
     width: 95%;
     margin: 0 auto;
-}
-
-///////////////////////////
-////////Chat Button////////
-///////////////////////////
-.button {
-    span {
-        #first {
-            animation: morph 1.25s ease infinite;
-        }
-
-        #middle {
-            animation: morph 1.25s .25s ease infinite;
-        }
-
-        #last {
-            animation: morph 1.25s .5s ease infinite;
-        }
-    }
-}
-
-@keyframes morph {
-    0% {
-        r: 3;
-    }
-    30% {
-        r: 4.5;
-    }
-    60% {
-        r: 3;
-    }
-    100% {
-        r: 3;
-    }
 }
 
 ///////////////////////////
@@ -140,112 +103,13 @@ header {
 }
 
 ///////////////////////////
-//////////Preloader////////
+////Spin Anim Preloader////
 ///////////////////////////
 
-#preloader {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    //background: $background-color;
-
-    .preloader-group {
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-rows: 3fr 1fr;
-
-        .loader-container {
-            display: flex;
-            position: relative;
-            height: 100%;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-
-            .background {
-                position: relative;
-                z-index: 1;
-                pointer-events: none;
-                user-select: none;
-                transform: scale(1.4);
-            }
-
-            .lines {
-                position: fixed;
-                z-index: 2;
-                pointer-events: none;
-                user-select: none;
-                transform: scale(1.4);
-            }
-
-            .logo {
-                position: fixed;
-                z-index: 3;
-                pointer-events: none;
-                user-select: none;
-                transform: scale(1.6);
-            }
-
-            .bottom-center-circle {
-                position: fixed;
-                z-index: 4;
-                pointer-events: none;
-                user-select: none;
-            }
-
-            .top-center-circle {
-                position: fixed;
-                z-index: 5;
-                pointer-events: none;
-                user-select: none;
-
-                svg {
-                    animation: spin 1s linear infinite;
-                    stroke-dasharray: 80 1000;
-                    stroke-linecap: round;
-                }
-            }
-        }
-
-        .progress {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            justify-content: center;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-
-            .bar {
-                width: 40%;
-                height: 0.4rem;
-                border-radius: 25px;
-            }
-
-            .percentage {
-                width: 0%;
-                height: 100%;
-                border-radius: 25px;
-            }
-
-            svg {
-                #first {
-                    animation: morph 1.25s ease infinite;
-                }
-
-                #middle {
-                    animation: morph 1.25s .25s ease infinite;
-                }
-
-                #last {
-                    animation: morph 1.25s .5s ease infinite;
-                }
-            }
-        }
-    }
+.spin {
+    animation: spin 1s linear infinite;
+    stroke-dasharray: 80 1000;
+    stroke-linecap: round;
 }
 
 @keyframes spin {
@@ -254,5 +118,38 @@ header {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+///////////////////////////
+///////Bullets Anim////////
+///////////////////////////
+
+.typing {
+    g {
+        circle{
+            animation: morph 1.25s ease infinite;
+        }
+        circle:nth-child(2){
+            animation: morph 1.25s .25s ease infinite;
+        }
+        circle:nth-child(3){
+            animation: morph 1.25s .5s ease infinite;
+        }
+    }
+}
+
+@keyframes morph {
+    0% {
+        r: 3;
+    }
+    30% {
+        r: 4.5;
+    }
+    60% {
+        r: 3;
+    }
+    100% {
+        r: 3;
     }
 }

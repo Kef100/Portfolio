@@ -1,5 +1,5 @@
 $('body').addClass("overflow-hidden");
-$('header, main').addClass("hidden");
+$('header, main, #language-selector').addClass("hidden");
 
 var progressBar = $("#percentage");
 var duration = 1000;
@@ -7,9 +7,8 @@ $(window).on("load", function () {
     start();
     setInterval(function () {
         $('#preloader').fadeOut();
-        $('header, main').removeClass("hidden");
-        $('header, header').fadeIn(2500);
         $('body').removeClass("overflow-hidden");
+        $('header, main, #language-selector').removeClass("hidden");
     }, duration);
 });
 

@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name') }}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href=" {{ asset('assets/files/branding/favicon.svg') }}">
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
