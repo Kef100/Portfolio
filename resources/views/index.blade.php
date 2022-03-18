@@ -3,9 +3,13 @@
 <script src="{{ asset('assets/js/preloader.js') }}" defer></script>
 
 @section('content')
-    <section class="w-full h-screen">
 
-    </section>
+    <div id="fullpage">
+        <div class="w-full h-screen section bg-landing bg-contain bg-[length:auto_100%]">
+            #1 Some section
+        </div>
+        <div class="w-full h-screen bg-primary-900 section">#2 Some section</div>
+    </div>
 
 
 {{--    <div class="container">--}}

@@ -9,9 +9,15 @@ module.exports = {
   theme: {
       container: {
       maxWidth: "95%",
-          margin: "0 auto",
+      margin: "0 auto",
   },
     extend: {
+        transitionTimingFunction: {
+            'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        },
+        backgroundImage: {
+            'landing': "url('/assets/files/images/landing/background.jpg')",
+        },
         width: {
             '20': '4rem',
         },

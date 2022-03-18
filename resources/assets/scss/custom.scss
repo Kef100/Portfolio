@@ -14,6 +14,35 @@ html {
     margin: 0 auto;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+///////////////////////////
+//Custom Fullpage Bullets//
+///////////////////////////
+#fp-nav ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#fp-nav ul li .active span {
+    background: transparent;
+    border: 2px solid #857852;
+    width: 25px !important;
+    height: 25px !important;
+    margin: -12.5px 0 0 -12.5px !important;
+}
+
+#fp-nav ul li a span {
+    background: white;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+}
+
+
 ///////////////////////////
 /////Header-Nav Styles/////
 ///////////////////////////
