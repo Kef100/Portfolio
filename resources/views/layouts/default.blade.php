@@ -48,8 +48,6 @@
         @endforeach
     @endif
 
-    @include('shared.preloader')
-
     @include('shared.header')
 
     <main>

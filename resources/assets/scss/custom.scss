@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.container{
+.container {
     width: 95%;
     margin: 0 auto;
 }
@@ -19,17 +19,93 @@ html {
 }
 
 ///////////////////////////
+/////Custom Scrolldown/////
+///////////////////////////
+.scrolldown-wrapper {
+    bottom: 5px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.scrolldown {
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    height: 46px;
+    justify-content: center;
+    margin: 0 auto 8px;
+    text-align: center;
+    width: 30px;
+}
+
+.scrolldown-p1, .scrolldown-p2 {
+    fill: #fff;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scrolldown;
+    animation-name: scrolldown
+}
+
+.scrolldown-p2 {
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s
+}
+
+@-webkit-keyframes scrolldown {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px)
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px)
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+}
+
+///////////////////////////
 //Custom Fullpage Bullets//
 ///////////////////////////
-#fp-nav ul{
+#fp-nav ul {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
 
-#fp-nav ul li .active span {
+#fp-nav ul li:nth-child(1) .active span {
     background: transparent;
     border: 2px solid #857852;
+    width: 25px !important;
+    height: 25px !important;
+    margin: -12.5px 0 0 -12.5px !important;
+}
+
+#fp-nav ul li .active span {
+    background: transparent;
+    border: 2px solid white;
     width: 25px !important;
     height: 25px !important;
     margin: -12.5px 0 0 -12.5px !important;
@@ -156,13 +232,15 @@ header {
 
 .typing {
     g {
-        circle{
+        circle {
             animation: morph 1.25s ease infinite;
         }
-        circle:nth-child(2){
+
+        circle:nth-child(2) {
             animation: morph 1.25s .25s ease infinite;
         }
-        circle:nth-child(3){
+
+        circle:nth-child(3) {
             animation: morph 1.25s .5s ease infinite;
         }
     }

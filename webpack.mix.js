@@ -18,7 +18,6 @@ mix.options(
     ).scripts(
       [
           'resources/assets/js/app.js',
-          'resources/assets/js/navbar-scroll.js',
         ], 'public/assets/js/app.js')
     .js('resources/assets/js/preloader.js','public/assets/js/preloader.js')
     .postCss('resources/assets/scss/app.css', 'public/assets/css', [

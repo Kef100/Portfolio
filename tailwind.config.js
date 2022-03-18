@@ -12,6 +12,12 @@ module.exports = {
       margin: "0 auto",
   },
     extend: {
+        backgroundSize: {
+            'auto': 'auto',
+            'cover': 'cover',
+            'contain': 'contain',
+            'full': 'auto 100%',
+        },
         transitionTimingFunction: {
             'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
         },
@@ -43,9 +49,9 @@ module.exports = {
                 '300': '#4B4B4B',
                 '400': '#363636',
                 '500': '#222222',
-                '600': '#060606',
-                '700': '#000000',
-                '800': '#000000',
+                '600': '#181818',
+                '700': '#111111',
+                '800': '#060606',
                 '900': '#000000'
             },
             'accent': {

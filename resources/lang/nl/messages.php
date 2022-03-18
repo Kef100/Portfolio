@@ -20,4 +20,11 @@ return [
         'lets_chat' => "Gesprek plannen?",
     ],
 
+    'landing' => [
+        "developer" => "Developer",
+        "designer" => "Designer",
+        'latest_projects' => "Recente Projecten",
+        'get_in_touch' => "Neem contact op!"
+    ],
+
 ];

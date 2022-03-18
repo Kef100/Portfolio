@@ -5,3 +5,12 @@
 .flag-path{
     clip-path: polygon(43% 0, 100% 0%, 100% 100%, 15% 100%);
 }
+
+.outlined{
+    color: #857852;
+    background: -webkit-linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #857852;
+}
