@@ -4,10 +4,10 @@
     <div class="container">
         <div class="grid pt-10 w-full h-full">
             <div class="flex relative w-full h-full justify-center items-center">
-                <div class="scale-150 relative pointer-events-none select-none z-10">
+                <div class="laptop:scale-110 desktop:scale-150 relative pointer-events-none select-none z-10">
                     <img src="{{ asset("assets/files/images/preloader/bg.svg") }}" alt="bg">
                 </div>
-                <div class="scale-150 fixed pointer-events-none select-none z-20">
+                <div class="laptop:scale-110 desktop:scale-150 fixed pointer-events-none select-none z-20">
                     <img src="{{ asset("assets/files/images/preloader/lines.svg") }}" alt="lines">
                 </div>
                 <div class="fixed z-50 pointer-event-none select-none">

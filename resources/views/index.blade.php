@@ -28,24 +28,24 @@
             </div>
             @include('shared.scrolldown')
 
-            <svg class="w-full h-auto fixed -bottom-px z-10" x="0" y="0" width="100%" height="100%" viewBox="0 0 1440 320">
-                <pattern class="stroke-secondary-600" id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="6" patternTransform="rotate(-45 2 2)">
-                    <path d="M -1,2 l 6,0" stroke-width="1"/>
-                </pattern>
+            {{--            <svg class="w-full h-auto fixed -bottom-px z-10" x="0" y="0" width="100%" height="100%" viewBox="0 0 1440 320">--}}
+            {{--                <pattern class="stroke-secondary-600" id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="6" patternTransform="rotate(-45 2 2)">--}}
+            {{--                    <path d="M -1,2 l 6,0" stroke-width="1"/>--}}
+            {{--                </pattern>--}}
 
-                <path fill="#111111" d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>
-                <path fill="url(#diagonalHatch)" d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>
-            </svg>
+            {{--                <path fill="#111111" d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>--}}
+            {{--                <path fill="url(#diagonalHatch)" d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>--}}
+            {{--            </svg>--}}
         </div>
-{{--        https://codepen.io/layalk/pen/mmXpog--}}
+        {{--        https://codepen.io/layalk/pen/mmXpog--}}
         <div class="w-full h-1/3 bg-secondary-700 section fp-auto-height">
             <div class="w-full h-full">
                 <h3>What I Enjoy Doing Most</h3>
                 <p>The tasks that i love doing most</p>
             </div>
-{{--            <svg class="w-full h-min z-10 fill-secondary" viewBox="0 0 1440 320">--}}
-{{--                <path d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>--}}
-{{--            </svg>--}}
+            {{--            <svg class="w-full h-min z-10 fill-secondary" viewBox="0 0 1440 320">--}}
+            {{--                <path d="M 0 230 C 71 299 204 306 320 278 C 497 226 502 239 594 262 C 749 312 865 306 1135 293 C 1248 282 1319 286 1440 232 L 1440 320 L 1405.7 320 C 1371.4 320 1303 320 1234 320 C 1165.7 320 1097 320 1029 320 C 960 320 891 320 823 320 C 754.3 320 686 320 617 320 C 548.6 320 480 320 411 320 C 342.9 320 274 320 206 320 C 137.1 320 69 320 34 320 L 0 320 Z"></path>--}}
+            {{--            </svg>--}}
         </div>
         <div class="w-full h-screen bg-secondary-700 section">
             #3 Some section
