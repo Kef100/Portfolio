@@ -7,7 +7,7 @@ var progressBar = $("#percentage");
 var duration = 1000;
 $(window).on("load", function () {
     start();
-    setInterval(function () {
+    setTimeout(function () {
         $('#preloader').fadeOut();
         $('header, main, #language-selector').removeClass("hidden");
         $('body').removeClass("overflow-hidden");
@@ -22,18 +22,24 @@ function start() {
         duration: duration
     });
 }
+
 function startFullpage() {
-    new fullpage('#fullpage', {
-        //options here
-        licenseKey: "E7E07604-CFAE4C0D-80D5EADB-A1BCAF71",
-        navigation: true,
-        autoScrolling:true,
-        scrollingSpeed: 700,
-        verticalCentered: true,
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-        fitToSection: true,
-        responsiveSlides: true,
-    })
+    if($('html').hasClass('fp-enabled')){
+        $.fn.fullpage.destroy('all');
+    }
+
+    $('#fullpage').fullpage(
+        {
+            licenseKey: "E7E07604-CFAE4C0D-80D5EADB-A1BCAF71",
+            navigation: true,
+            autoScrolling: true,
+            scrollingSpeed: 700,
+            verticalCentered: true,
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+            fitToSection: true,
+            responsiveSlides: true,
+        }
+    );
 }

@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="fullpage">
-        <div class="w-full h-screen section bg-landing bg-contain bg-full">
+        <div class="w-full h-full section bg-landing bg-cover bg-full">
             <div class="flex flex-col gap-y-24 justify-center items-center">
                 <div class="flex gap-y-4 justify-center items-center flex-col text-5xl">
                     <h2>{{__("messages.landing.developer")}}</h2>
@@ -48,7 +48,9 @@
             {{--            </svg>--}}
         </div>
         <div class="w-full h-screen bg-secondary-700 section">
-            #3 Some section
+            <div data-tilt class="card flex justify-center items-center [transform-style:preserve-3d] bg-gradient-to-br from-purple-600 to-pink-500 w-24 h-24">
+                <div class="bg-white w-5 h-5 [transform:translateZ(20px)]"></div>
+            </div>
         </div>
         <div class="w-full h-screen bg-secondary-700 section">
             #4 Some section

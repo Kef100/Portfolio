@@ -11,14 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.options(
-    {
-    processCssUrls: false,
-    }
-    ).scripts(
-      [
-          'resources/assets/js/app.js',
-        ], 'public/assets/js/app.js')
+mix.options({processCssUrls: true,})
+    .scripts('resources/assets/js/app.js', 'public/assets/js/app.js')
+    .js('resources/assets/js/tilt.jquery.js', 'public/assets/js/tilt.jquery.js')
     .js('resources/assets/js/preloader.js','public/assets/js/preloader.js')
     .postCss('resources/assets/scss/app.css', 'public/assets/css', [
         require("tailwindcss"),
