@@ -1,5 +1,5 @@
 <div class="w-full h-full bg-secondary-700 section fp-auto-height">
-    <div class="after:content-[''] after:absolute after:left-36 after:top-24 after:bg-no-repeat after:bg-triangle after:w-24 after:h-24"></div>
+    <div class="after:content-[''] after:absolute after:left-36 after:top-24 after:bg-no-repeat after:bg-triangle after:w-24 after:h-28"></div>
     <div class="after:content-[''] after:absolute after:left-24 after:-bottom-4 after:bg-no-repeat after:bg-cross after:w-24 after:h-24"></div>
     <div class="after:content-[''] after:absolute after:right-24 after:top-12 after:bg-no-repeat after:bg-circle after:w-10 after:h-10"></div>
     <div class="flex flex-col gap-y-24 pb-24 justify-center items-center">

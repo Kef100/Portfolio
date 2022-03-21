@@ -1,4 +1,4 @@
-<header class="w-full h-fit fixed transition-all z-10">
+<header class="w-full h-fit fixed top-0 transition-all z-10">
     <nav class="grid grid-flow-col pb-6 items-center justify-around w-full padding">
         <a class="logo" href="{{ url('/') }}"><span><img class="w-20" src="{{ asset('assets/files/branding/logo-banner.svg')  }}" alt="Logo"></span></a>
         <a class="list-none text-2xl text-white bg-transparent no-underline roll-link" href="#"><span class="block relative transition-all"
@@ -24,5 +24,3 @@
         </a>
     </nav>
 </header>
-
-@include('shared.language')

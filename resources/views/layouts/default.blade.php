@@ -48,7 +48,7 @@
         @endforeach
     @endif
 
-    @include('shared.header')
+    @include('shared.language')
 
     <main>
         @yield('content')

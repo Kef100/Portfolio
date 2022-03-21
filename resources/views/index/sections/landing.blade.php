@@ -1,4 +1,5 @@
 <div class="w-full h-full section bg-landing bg-full">
+    @include('shared.header')
     <div class="flex flex-col gap-y-24 justify-center items-center">
         <div class="flex gap-y-4 justify-center items-center flex-col text-5xl">
             <h2>{{__("messages.homepage.landing.developer")}}</h2>
