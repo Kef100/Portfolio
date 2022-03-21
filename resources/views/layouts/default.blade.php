@@ -26,7 +26,7 @@
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 </head>
-<body class="bg-secondary-500 text-white">
+<body class="bg-secondary-700 text-white">
     <script>
         toastr.options.progressBar = true;
     </script>
@@ -53,7 +53,5 @@
     <main>
         @yield('content')
     </main>
-
-    @include('shared.footer')
 </body>
 <html>

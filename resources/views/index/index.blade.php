@@ -13,6 +13,7 @@
         @include('index.sections.portfolio')
         @include('index.sections.testimonials')
         @include('index.sections.contact')
+        @include('shared.footer')
     </div>
 
 @endsection

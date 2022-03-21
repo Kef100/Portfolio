@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="589.091" height="311.851" viewBox="0 0 589.091 311.851">
+  <defs>
+      <defs>
+          <linearGradient id="linear" x1="0%" y1="0%" x2="200%" y2="0%">
+              <stop offset="0%"   stop-color="#857852"/>
+              <stop offset="100%" stop-color="#D5CEBA"/>
+          </linearGradient>
+      </defs>
+      <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        stroke-dasharray: 20;
+      }
+    </style>
+  </defs>
+  <path stroke="url(#linear)" class="cls-1" d="M4619-738.258c46.379,23.006,97.245,89.621,185.516,92.025s69.019-91.681,167.567-82.41,199.5,54.253,226.628,119.495-26.44,96.489-118.121,141.471-248.6,38.458-248.6,38.458" transform="translate(-4617.66 739.598)"/>
+</svg>

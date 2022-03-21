@@ -44,6 +44,30 @@ return [
                 'text' => "Donec sollicitudin ullamcorper mi sit amet feugiat. Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut nibh...",
             ],
         ],
-    ],
 
+        'about' => [
+            'title' => "Over mij",
+            'cv' => "Bekijk cv",
+            'content_title' => [
+                'start' => "Dingen die je",
+                'outlined' => "over mij",
+                'end' => "moet weten",
+            ],
+            'content' => [
+                'text' => "Donec sollicitudin ullamcorper mi sit amet feugiat. Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget odio quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam scelerisque, quis ultricies quam euismod. Nulla risus risus. Aenean fermentum tellus sit amet quam scelerisque, quis ultricies quam euismod. Nulla risus risus",
+                'experienced_in' => [
+                    'title' => "Meest ervaren in",
+                    'text' => "Web Development"
+                ],
+                'years_of_experience' => [
+                    'title' => "Jaren ervaring",
+                    'text' => "2+ Jaar"
+                ],
+                'education' => [
+                    'title' => "Educatie",
+                    'text' => "HBO"
+                ],
+            ],
+        ],
+    ],
 ];

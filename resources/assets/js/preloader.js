@@ -1,8 +1,6 @@
 $('body').addClass("overflow-hidden");
 $('header, main, #language-selector').addClass("hidden");
 
-console.log = function(){};
-
 var progressBar = $("#percentage");
 var duration = 1000;
 $(window).on("load", function () {
@@ -34,13 +32,13 @@ function startFullpage() {
             navigation: true,
             autoScrolling: true,
             scrollingSpeed: 700,
-            paddingTop: '1em',
+            paddingTop: '1.5em',
+            paddingBottom: '1.5em',
             verticalCentered: true,
             keyboardScrolling: true,
             animateAnchor: true,
             recordHistory: true,
             fitToSection: true,
-            responsiveSlides: true,
-        }
+        },
     );
 }
