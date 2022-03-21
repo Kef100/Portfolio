@@ -34,6 +34,7 @@ function startFullpage() {
             navigation: true,
             autoScrolling: true,
             scrollingSpeed: 700,
+            paddingTop: '1em',
             verticalCentered: true,
             keyboardScrolling: true,
             animateAnchor: true,

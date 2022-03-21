@@ -14,3 +14,16 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #857852;
 }
+
+.primary-background{
+    background: linear-gradient(90deg, rgba(133, 120, 82, 0.4), rgba(98, 89, 61, 0.2) 51%, rgba(133, 120, 82, 0.4)) var(--x, 0)/ 200%;
+}
+
+.secondary-background{
+    background: linear-gradient(90deg, rgba(107, 114, 128, 0.4), rgba(75, 85, 99, 0.2) 51%, rgba(107, 114, 128, 0.4)) var(--x, 0)/ 200%;
+}
+
+.primary-background-hover:hover,
+.secondary-background-hover:hover{
+    --x: 100%;
+}

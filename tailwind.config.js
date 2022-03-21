@@ -31,13 +31,16 @@ module.exports = {
                 'auto': 'auto',
                 'cover': 'cover',
                 'contain': 'contain',
-                'full': 'auto 100%',
+                'full': '100% 100%',
             },
             transitionTimingFunction: {
                 'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             },
             backgroundImage: {
                 'landing': "url('/assets/files/images/landing/background.jpg')",
+                'circle': "url('/assets/files/images/symbols/Circle.svg')",
+                'triangle': "url('/assets/files/images/symbols/triangle.svg')",
+                'cross': "url('/assets/files/images/symbols/X.svg')",
             },
             width: {
                 '20': '4rem',
