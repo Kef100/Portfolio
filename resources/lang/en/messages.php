@@ -69,6 +69,9 @@ return [
                 ],
             ],
         ],
+        'portfolio' => [
+            'title' => "Portfolio",
+        ],
     ],
 
 ];

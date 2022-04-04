@@ -37,6 +37,12 @@ html {
     z-index: 100;
 }
 
+@media screen and(min-width: 1920px){
+    .scrolldown-wrapper {
+        bottom: 80px;
+    }
+}
+
 .scrolldown {
     border: 2px solid #fff;
     border-radius: 30px;

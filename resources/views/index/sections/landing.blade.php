@@ -1,10 +1,10 @@
-<div class="w-full h-full section bg-landing bg-full">
+<div class="w-full h-full section section-landing bg-landing bg-full">
     @include('shared.header')
     <div class="flex flex-col gap-y-24 justify-center items-center">
-        <div class="flex gap-y-4 justify-center items-center flex-col text-5xl">
-            <h2>{{__("messages.homepage.landing.developer")}}</h2>
+        <div class="landing-text flex gap-y-4 justify-center items-center flex-col text-5xl">
+            <h2 class="first-title">{{__("messages.homepage.landing.developer")}}</h2>
             <p class="outlined text-4xl font-bold">&&</p>
-            <h2>{{__("messages.homepage.landing.designer")}}</h2>
+            <h2 class="second-title">{{__("messages.homepage.landing.designer")}}</h2>
         </div>
         <div class="flex gap-x-32 justify-center items-center flex-row">
             <a href="{{ url("/projects") }}"
@@ -20,7 +20,7 @@
     </div>
     @include('shared.scrolldown')
 
-    <svg  class="absolute -bottom-px" x="0" y="0" width="100%" height="110" viewBox="0 0 100% 110" xmlns="http://www.w3.org/2000/svg">
+    <svg class="absolute -bottom-px" x="0" y="0" width="100%" height="110" xmlns="http://www.w3.org/2000/svg">
         <pattern class="stroke-secondary-600" id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="6" patternTransform="rotate(-45 2 2)">
             <path d="M -1,2 l 6,0" stroke-width="1"/>
         </pattern>
