@@ -1,8 +1,8 @@
 $('body').addClass("overflow-hidden");
 $('header, main, #language-selector').addClass("hidden");
 
-var progressBar = $("#percentage");
-var duration = 1000;
+const progressBar = $("#percentage");
+let duration = 1000;
 $(window).on("load", function () {
     start();
     setTimeout(function () {
@@ -39,6 +39,14 @@ function startFullpage() {
             animateAnchor: true,
             recordHistory: true,
             fitToSection: true,
+            afterLoad: function (origin, destination) {
+
+                //using index
+                if (destination.index === 3) {
+                    //Portfolio section
+                    startCounter();
+                }
+            }
         },
     );
 }

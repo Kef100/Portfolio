@@ -71,6 +71,11 @@ return [
         ],
         'portfolio' => [
             'title' => "Portfolio",
+
+            'slider' => [
+                'read_more' => "Read more",
+                'view_all' => "View all posts",
+            ]
         ],
     ],
 

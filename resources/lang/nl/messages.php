@@ -72,6 +72,11 @@ return [
 
         'portfolio' => [
             'title' => "Portfolio",
+
+            'slider' => [
+                'read_more' => "Lees meer",
+                'view_all' => "Bekijk alle posts",
+            ]
         ],
     ],
 ];

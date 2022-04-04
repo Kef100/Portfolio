@@ -16,7 +16,6 @@ mix.options({processCssUrls: true,})
     .js('resources/assets/js/tilt.jquery.js', 'public/assets/js/tilt.jquery.js')
     .js('resources/assets/js/preloader.js','public/assets/js/preloader.js')
     .js('resources/assets/js/slider.js','public/assets/js/slider.js')
-    .js('resources/assets/js/scrollReveal.js','public/assets/js/scrollReveal.js')
     .postCss('resources/assets/scss/app.css', 'public/assets/css', [
         require("tailwindcss"),
     ])
