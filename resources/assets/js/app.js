@@ -117,12 +117,10 @@ function startCounter(time, slide) {
 
             if((index) >= slides.length){
                 //Restart slider, all slides were looped
-                console.log("Restarting: Slide #" + index + " Going to slide #" + 1);
                 slideIndex = 1;
                 nextSlide(0);
             }else{
                 //Go to next slide
-                console.log("Slide #" + index + " Going to slide #" + (index + 1));
                 nextSlide(slide)
             }
             return;

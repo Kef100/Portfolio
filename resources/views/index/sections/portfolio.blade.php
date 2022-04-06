@@ -18,7 +18,7 @@
                 <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
             </div>
             <div class="flex flex-col gap-y-12">
-                <div class="flex flex-row portfolio-slide gap-x-24" data-slide-time="2000">
+                <div class="flex flex-row portfolio-slide gap-x-24" data-slide-time="1000">
                     <div class="relative flex-1 flex flex-col py-16">
                         <div class="laptop:w-3/4">
 
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="5000">
+                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="500">
                     <div class="relative flex-1 flex flex-col py-16">
                         <div class="laptop:w-3/4">
 
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="5000">
+                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="500">
                     <div class="relative flex-1 flex flex-col py-16">
                         <div class="laptop:w-3/4">
 
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="5000">
+                <div class="flex flex-row portfolio-slide hidden gap-x-24" data-slide-time="500">
                     <div class="relative flex-1 flex flex-col py-16">
                         <div class="laptop:w-3/4">
 
