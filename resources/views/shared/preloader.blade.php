@@ -1,6 +1,3 @@
-<script src="{{ asset('assets/js/slider.js') }}" defer></script>
-<script src="{{ asset('assets/js/preloader.js') }}" defer></script>
-
 <div id="preloader" class="h-full w-full relative bg-secondary-500">
     <div class="container">
         <div class="grid pt-10 w-full h-full">
