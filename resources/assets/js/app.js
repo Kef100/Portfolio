@@ -12,7 +12,7 @@ const progressBar = $("#percentage");
 let duration = 1000;
 
 //Scroll to button
-$(document).on('click', '#scrolldown', function(){
+$(document).on('click', '#scrolldown', function () {
     fullpage_api.moveTo(2);
 });
 
@@ -34,13 +34,13 @@ $(window).on("load", function () {
 function start() {
     progressBar.stop().css("width", 0).animate({
         width: 100 + '%'
-    },{
+    }, {
         duration: duration
     });
 }
 
 function startFullpage() {
-    if($('html').hasClass('fp-enabled')){
+    if ($('html').hasClass('fp-enabled')) {
         $.fn.fullpage.destroy('all');
     }
 
@@ -65,8 +65,8 @@ function startFullpage() {
                 }
             },
             onLeave: function (origin, destination) {
-                if (!destination.index === 3) {
-                    //Portfolio section
+                if (destination.index === 3) {}
+                else {
                     clearInterval(interval);
                 }
             }
@@ -83,22 +83,22 @@ function showSlide(slide) {
     startCounter($(slideElement).attr("data-slide-time"), slide);
 }
 
-function nextSlide(slide){
+function nextSlide(slide) {
     showSlide(slide + 1);
     slideIndex++;
     //TODO: Change to next slide (Next bullet & content)
 }
 
-function previousSlide(slide){
-    if(slide >= 1){
-        showSlide(slide -1);
+function previousSlide(slide) {
+    if (slide >= 1) {
+        showSlide(slide - 1);
         slideIndex--;
         //TODO: Change to previous slide (Previous bullet & content)
     }
 }
 
-function goToSlide(slide){
-    if(slide != slideIndex){
+function goToSlide(slide) {
+    if (slide != slideIndex) {
         clearInterval(interval);
         i = 0;
         showSlide(slide);
@@ -115,12 +115,13 @@ function startCounter(time, slide) {
             clearInterval(interval);
             i = 0;
 
-            if((index) >= slides.length){
+            if ((index) >= slides.length) {
                 //Restart slider, all slides were looped
                 slideIndex = 1;
                 nextSlide(0);
-            }else{
+            } else {
                 //Go to next slide
+                console.log("Next slide");
                 nextSlide(slide)
             }
             return;
@@ -132,7 +133,7 @@ function startCounter(time, slide) {
 }
 
 $("#nextSlide").click(function () {
-    if(slides.length >= (slideIndex + 1)){
+    if (slides.length >= (slideIndex + 1)) {
         clearInterval(interval);
         i = 0;
         nextSlide(slideIndex);
@@ -140,11 +141,11 @@ $("#nextSlide").click(function () {
 });
 
 $("#previousSlide").click(function () {
-    if((slideIndex - 1) >= 1){
+    if ((slideIndex - 1) >= 1) {
         clearInterval(interval);
         i = 0;
         previousSlide(slideIndex);
-    }else{
+    } else {
         clearInterval(interval);
         slideIndex = slides.length + 1;
         i = 0;
