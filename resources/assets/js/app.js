@@ -77,8 +77,11 @@ function startFullpage() {
 }
 
 //Slider & Circle
-inner.css("stroke-dasharray", dasharray);
-inner.css("stroke-dashoffset", dasharray);
+bullets.each(function() {
+    $(this).find("svg circle:nth-child(2)").css("stroke-dasharray", dasharray);
+    $(this).find("svg circle:nth-child(2)").css("stroke-dashoffset", dasharray);
+
+});
 
 function showSlide(slide) {
     let slideElement = slides.get(slide - 1);
@@ -122,6 +125,7 @@ function goToSlide(slide) {
 
 
 function startCounter(time, slide) {
+    let bullet = bullets.get(slide - 1);
     interval = setInterval(function () {
         if (i == time) {
             clearInterval(interval);
@@ -137,8 +141,7 @@ function startCounter(time, slide) {
             }
             return;
         }
-
-        inner.css('stroke-dashoffset', dasharray - ((i + 1) * (dasharray / time)));
+        $(bullet).find("svg circle:nth-child(2)").css('stroke-dashoffset', dasharray - ((i + 1) * (dasharray / time)));
         i++;
     }, 1);
 }
