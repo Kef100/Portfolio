@@ -8,7 +8,7 @@
     margin: 0;
 }
 
-.century-gothic{
+.century-gothic {
     font-family: "Century Gothic", sans-serif;
 }
 
@@ -33,6 +33,26 @@ html {
     stroke-linejoin: round;
 }
 
+.portfolio-bullet svg{
+    transition: transform 300ms;
+    transform: rotate(-90deg) scale(0);
+
+}
+.portfolio-bullet:before {
+    transition: opacity 250ms ease;
+    opacity: 1;
+}
+
+.bullet-active svg{
+    transition: transform 300ms;
+    transform: rotate(-90deg) scale(1);
+}
+
+.bullet-active:before {
+    transition: opacity 250ms ease;
+    opacity: 0;
+}
+
 ///////////////////////////
 /////Custom Scrolldown/////
 ///////////////////////////
@@ -45,7 +65,7 @@ html {
     z-index: 100;
 }
 
-@media screen and(min-width: 1920px){
+@media screen and(min-width: 1920px) {
     .scrolldown-wrapper {
         bottom: 80px;
     }

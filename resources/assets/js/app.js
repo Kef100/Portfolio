@@ -2,6 +2,7 @@
 let slideIndex = 1;
 const inner = $("#circle #inline");
 const slides = $(".portfolio-slide");
+const bullets = $(".portfolio-bullet");
 let interval;
 let i = 0;
 const pi = 3.14;
@@ -62,6 +63,7 @@ function startFullpage() {
                 if (destination.index === 3) {
                     //Portfolio section
                     showSlide(slideIndex);
+                    showBullet(slideIndex - 1);
                 }
             },
             onLeave: function (origin, destination) {
@@ -79,12 +81,21 @@ inner.css("stroke-dasharray", dasharray);
 inner.css("stroke-dashoffset", dasharray);
 
 function showSlide(slide) {
-    let slideElement = slides.get(slideIndex - 1);
-    startCounter($(slideElement).attr("data-slide-time"), slide);
+    let slideElement = slides.get(slide - 1);
+    startCounter($(slideElement).attr("data-slide-duration"), slide);
+}
+
+function showBullet(slide) {
+    let nextBullet = bullets.get(slide);
+    bullets.each(function() {
+        $(this).removeClass("bullet-active");
+    });
+    $(nextBullet).addClass("bullet-active");
 }
 
 function nextSlide(slide) {
     showSlide(slide + 1);
+    showBullet(slide);
     slideIndex++;
     //TODO: Change to next slide (Next bullet & content)
 }
@@ -92,36 +103,36 @@ function nextSlide(slide) {
 function previousSlide(slide) {
     if (slide >= 1) {
         showSlide(slide - 1);
+        showBullet(slide);
         slideIndex--;
         //TODO: Change to previous slide (Previous bullet & content)
     }
 }
 
 function goToSlide(slide) {
-    if (slide != slideIndex) {
+    if (slide !== slideIndex) {
         clearInterval(interval);
         i = 0;
         showSlide(slide);
+        showBullet(slide - 1);
         slideIndex = slide;
-        //TODO: Change to chosen slide (Go to bullet & content)
+        //TODO: Change to chosen slide (content)
     }
 }
 
 
 function startCounter(time, slide) {
-    let index = slide;
     interval = setInterval(function () {
         if (i == time) {
             clearInterval(interval);
             i = 0;
 
-            if ((index) >= slides.length) {
+            if ((slide) >= slides.length) {
                 //Restart slider, all slides were looped
-                slideIndex = 1;
+                slideIndex = 0;
                 nextSlide(0);
             } else {
                 //Go to next slide
-                console.log("Next slide");
                 nextSlide(slide)
             }
             return;
@@ -136,7 +147,12 @@ $("#nextSlide").click(function () {
     if (slides.length >= (slideIndex + 1)) {
         clearInterval(interval);
         i = 0;
-        nextSlide(slideIndex);
+        nextSlide(slideIndex - 1);
+    }else{
+        clearInterval(interval);
+        i = 0;
+        slideIndex = 1;
+        nextSlide(0);
     }
 });
 
