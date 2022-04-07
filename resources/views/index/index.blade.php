@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div id="fullpage">
+    <div id="fullpage" class="overflow-hidden">
         @include('index.sections.landing')
         @include('index.sections.preferences')
         @include('index.sections.about')

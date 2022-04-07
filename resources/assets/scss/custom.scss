@@ -216,10 +216,10 @@ html {
     -ms-transition: all 400ms ease;
     transition: all 400ms ease;
 
-    -webkit-transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0;
     -moz-transform-origin: 50% 0%;
     -ms-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -249,10 +249,10 @@ html {
     color: white;
     background: transparent;
 
-    -webkit-transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0;
     -moz-transform-origin: 50% 0%;
     -ms-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
 
     -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
     -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
