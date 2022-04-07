@@ -1,5 +1,5 @@
 //Slider Variables
-let slideIndex = 1;
+let sliderIndex = 1;
 const inner = $("#circle #inline");
 const slides = $(".portfolio-slide");
 const bullets = $(".portfolio-bullet");
@@ -62,8 +62,8 @@ function startFullpage() {
 
                 if (destination.index === 3) {
                     //Portfolio section
-                    showSlide(slideIndex);
-                    showBullet(slideIndex - 1);
+                    showSlide(sliderIndex);
+                    showBullet(sliderIndex - 1);
                 }
             },
             onLeave: function (origin, destination) {
@@ -102,29 +102,26 @@ function showBullet(slide) {
 }
 
 function nextSlide(slide) {
-    slideIndex++;
-    showSlide(slideIndex);
-    showBullet(slideIndex - 1);
-    //TODO: Change to next slide (content)
+    sliderIndex++;
+    showSlide(sliderIndex);
+    showBullet(sliderIndex - 1);
 }
 
 function previousSlide(slide) {
     if (slide >= 1) {
-        slideIndex--;
-        showSlide(slideIndex);
-        showBullet(slideIndex - 1);
-        //TODO: Change to previous slide (content)
+        sliderIndex--;
+        showSlide(sliderIndex);
+        showBullet(sliderIndex - 1);
     }
 }
 
 function goToSlide(slide) {
-    if (slide !== slideIndex) {
+    if (slide !== sliderIndex) {
         clearInterval(interval);
         i = 0;
         showSlide(slide);
         showBullet(slide - 1);
-        slideIndex = slide;
-        //TODO: Change to chosen slide (content)
+        sliderIndex = slide;
     }
 }
 
@@ -138,7 +135,7 @@ function startCounter(time, slide) {
 
             if ((slide) >= slides.length) {
                 //Restart slider, all slides were looped
-                slideIndex = 0;
+                sliderIndex = 0;
                 nextSlide(0);
             } else {
                 //Go to next slide
@@ -152,26 +149,26 @@ function startCounter(time, slide) {
 }
 
 $("#nextSlide").click(function () {
-    if (slides.length >= (slideIndex + 1)) {
+    if (slides.length >= (sliderIndex + 1)) {
         clearInterval(interval);
         i = 0;
-        nextSlide(slideIndex - 1);
+        nextSlide(sliderIndex - 1);
     }else{
         clearInterval(interval);
         i = 0;
-        slideIndex = 0;
+        sliderIndex = 0;
         nextSlide(0);
     }
 });
 
 $("#previousSlide").click(function () {
-    if ((slideIndex - 1) >= 1) {
+    if ((sliderIndex - 1) >= 1) {
         clearInterval(interval);
         i = 0;
-        previousSlide(slideIndex);
+        previousSlide(sliderIndex);
     } else {
         clearInterval(interval);
-        slideIndex = slides.length + 1;
+        sliderIndex = slides.length + 1;
         i = 0;
         previousSlide(slides.length);
     }

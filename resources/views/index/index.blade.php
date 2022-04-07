@@ -1,9 +1,5 @@
 @extends('layouts.default')
 
-<script src="{{ asset('assets/js/preloader.js') }}" defer></script>
-
-@include('shared.preloader')
-
 @section('content')
 
     <div id="fullpage">
