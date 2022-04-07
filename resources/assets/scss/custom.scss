@@ -33,17 +33,18 @@ html {
     stroke-linejoin: round;
 }
 
-.portfolio-bullet svg{
+.portfolio-bullet svg {
     transition: transform 300ms;
     transform: rotate(-90deg) scale(0);
 
 }
+
 .portfolio-bullet:before {
     transition: opacity 250ms ease;
     opacity: 1;
 }
 
-.bullet-active svg{
+.bullet-active svg {
     transition: transform 300ms;
     transform: rotate(-90deg) scale(1);
 }
@@ -168,84 +169,84 @@ html {
     background: rgba(0, 0, 0, 0.6);
 }
 
-header {
-    nav {
-        .roll-link {
-            display: inline-block;
-            overflow: hidden;
+///////////////////////////
+/////Custom Roll-Link//////
+///////////////////////////
 
-            vertical-align: top;
+.roll-link {
+    display: inline-block;
+    overflow: hidden;
 
-            -webkit-perspective: 600px;
-            -moz-perspective: 600px;
-            -ms-perspective: 600px;
-            perspective: 600px;
+    vertical-align: top;
 
-            -webkit-perspective-origin: 50% 50%;
-            -moz-perspective-origin: 50% 50%;
-            -ms-perspective-origin: 50% 50%;
-            perspective-origin: 50% 50%;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -ms-perspective: 600px;
+    perspective: 600px;
 
-        }
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
 
-        .roll-link:hover {
-            text-decoration: none;
-        }
+}
 
-        .roll-link span {
-            display: block;
-            position: relative;
-            padding: 0 2px;
+.roll-link:hover {
+    text-decoration: none;
+}
 
-            -webkit-transition: all 400ms ease;
-            -moz-transition: all 400ms ease;
-            -ms-transition: all 400ms ease;
-            transition: all 400ms ease;
+.roll-link span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
 
-            -webkit-transform-origin: 50% 0%;
-            -moz-transform-origin: 50% 0%;
-            -ms-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    transition: all 400ms ease;
 
-            -webkit-transform-style: preserve-3d;
-            -moz-transform-style: preserve-3d;
-            -ms-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-        }
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
 
-        .roll-link:hover span {
-            background: transparent;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.roll-link:hover span {
+    background: transparent;
 
 
-            -webkit-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
-            -moz-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
-            -ms-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
-            transform: translate3d(0px, 0px, -30px) rotateX(92deg);
-        }
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
+    -moz-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
+    -ms-transform: translate3d(0px, 0px, -30px) rotateX(92deg);
+    transform: translate3d(0px, 0px, -30px) rotateX(92deg);
+}
 
-        .roll-link span:after {
-            content: attr(data-title);
+.roll-link span:after {
+    content: attr(data-title);
 
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding: 0 2px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 2px;
 
-            color: white;
-            background: transparent;
+    color: white;
+    background: transparent;
 
-            -webkit-transform-origin: 50% 0%;
-            -moz-transform-origin: 50% 0%;
-            -ms-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
 
-            -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-            -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-            -ms-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-            transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-        }
-    }
+    -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    -ms-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
 }
 
 ///////////////////////////

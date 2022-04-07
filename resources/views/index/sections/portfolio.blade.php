@@ -206,7 +206,9 @@
                         </li>
                     </ul>
                     <div class="bg-white h-px rounded-full w-24"></div>
-                    <a href="#" class="text-lg">{{ __("messages.homepage.portfolio.slider.view_all") }}</a>
+                    <a href="#" class="text-lg list-none text-white bg-transparent no-underline roll-link">
+                        <span class="block relative transition-all" data-title="{{ __("messages.homepage.portfolio.slider.view_all") }}">{{ __("messages.homepage.portfolio.slider.view_all") }}</span>
+                    </a>
                 </div>
             </div>
             <div class="absolute -right-16 hover:opacity-60 transition-all cursor-pointer" id="nextSlide">

@@ -97,18 +97,18 @@ function showBullet(slide) {
 }
 
 function nextSlide(slide) {
-    showSlide(slide + 1);
-    showBullet(slide);
     slideIndex++;
-    //TODO: Change to next slide (Next bullet & content)
+    showSlide(slideIndex);
+    showBullet(slideIndex - 1);
+    //TODO: Change to next slide (content)
 }
 
 function previousSlide(slide) {
     if (slide >= 1) {
-        showSlide(slide - 1);
-        showBullet(slide);
         slideIndex--;
-        //TODO: Change to previous slide (Previous bullet & content)
+        showSlide(slideIndex);
+        showBullet(slideIndex - 1);
+        //TODO: Change to previous slide (content)
     }
 }
 
@@ -154,7 +154,7 @@ $("#nextSlide").click(function () {
     }else{
         clearInterval(interval);
         i = 0;
-        slideIndex = 1;
+        slideIndex = 0;
         nextSlide(0);
     }
 });
