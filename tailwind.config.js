@@ -7,6 +7,12 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
+        minHeight: {
+            '1/2': '50vh',
+        },
+        maxHeight: {
+            '1/2': '50vh',
+        },
         screens: {
             'mobile-sm': {'min': '320px'},
             // => @media (min-width: 320px) { ... }

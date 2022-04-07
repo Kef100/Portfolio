@@ -85,6 +85,11 @@ bullets.each(function() {
 
 function showSlide(slide) {
     let slideElement = slides.get(slide - 1);
+    slides.each(function() {
+        $(this).removeClass("active-portfolio-slide");
+    });
+    $(slideElement).addClass("active-portfolio-slide");
+
     startCounter($(slideElement).attr("data-slide-duration"), slide);
 }
 
