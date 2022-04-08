@@ -29,11 +29,13 @@ html {
 ///////Slider Styles///////
 ///////////////////////////
 .portfolio-slide{
-    display: none;
+    transition: opacity 200ms;
+    opacity: 0;
 }
 
 .active-portfolio-slide{
-    display: flex;
+    transition: opacity 200ms;
+    opacity: 1;
 }
 
 ///////////////////////////

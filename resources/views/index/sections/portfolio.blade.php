@@ -17,146 +17,167 @@
             <div class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer" id="previousSlide">
                 <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
             </div>
-            <div class="flex flex-col gap-y-12 overflow-hidden">
-                <div class="flex flex-row portfolio-slide active-portfolio-slide gap-x-24" data-slide-duration="1000">
-                    <div class="relative flex-1 flex flex-col py-16">
-                        <div class="laptop:w-3/4">
+            <div class="flex flex-col gap-y-12 overflow-hidden w-full">
+                <div class="w-full overflow-auto min-h-1/2 h-full">
+                    <div class="flex flex-row absolute portfolio-slide active-portfolio-slide gap-x-24"
+                         data-slide-duration="1000">
+                        <div class="relative flex-1 flex flex-col py-16">
+                            <div class="laptop:w-3/4">
 
-                            <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</h3>
-                            <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet feugiat.
-                                Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget odio
-                                quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
-                                scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu, accumsan
-                                interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
-                            <a href=""
-                               class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
-                                <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
-                                <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
-                            </a>
+                                <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.</h3>
+                                <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet
+                                    feugiat.
+                                    Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget
+                                    odio
+                                    quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
+                                    scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu,
+                                    accumsan
+                                    interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
+                                <a href=""
+                                   class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                    <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
+                                    <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
+                            <div
+                                class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
+                                <img class="w-full object-center object-cover h-full"
+                                     src="{{ asset('assets/files/images/landing/background.jpg') }}">
+                            </div>
                         </div>
                     </div>
-                    <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
-                        <div
-                            class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
-                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                            </svg>
+                    <div class="flex flex-row absolute portfolio-slide gap-x-24" data-slide-duration="1000">
+                        <div class="relative flex-1 flex flex-col py-16">
+                            <div class="laptop:w-3/4">
+
+                                <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.</h3>
+                                <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet
+                                    feugiat.
+                                    Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget
+                                    odio
+                                    quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
+                                    scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu,
+                                    accumsan
+                                    interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
+                                <a href=""
+                                   class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                    <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
+                                    <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                                </a>
+                            </div>
                         </div>
-                        <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
-                            <img class="w-full object-center object-cover h-full" src="{{ asset('assets/files/images/landing/background.jpg') }}">
+                        <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
+                            <div
+                                class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
+                                <img class="w-full object-center object-cover h-full"
+                                     src="{{ asset('assets/files/images/landing/background.jpg') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row absolute portfolio-slide gap-x-24" data-slide-duration="1000">
+                        <div class="relative flex-1 flex flex-col py-16">
+                            <div class="laptop:w-3/4">
+
+                                <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.</h3>
+                                <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet
+                                    feugiat.
+                                    Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget
+                                    odio
+                                    quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
+                                    scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu,
+                                    accumsan
+                                    interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
+                                <a href=""
+                                   class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                    <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
+                                    <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
+                            <div
+                                class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
+                                <img class="w-full object-center object-cover h-full"
+                                     src="{{ asset('assets/files/images/landing/background.jpg') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row absolute portfolio-slide gap-x-24" data-slide-duration="1000">
+                        <div class="relative flex-1 flex flex-col py-16">
+                            <div class="laptop:w-3/4">
+
+                                <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.</h3>
+                                <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet
+                                    feugiat.
+                                    Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget
+                                    odio
+                                    quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
+                                    scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu,
+                                    accumsan
+                                    interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
+                                <a href=""
+                                   class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                    <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
+                                    <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
+                            <div
+                                class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                    <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
+                                          stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
+                                <img class="w-full object-center object-cover h-full"
+                                     src="{{ asset('assets/files/images/landing/background.jpg') }}">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row portfolio-slide gap-x-24" data-slide-duration="1000">
-                    <div class="relative flex-1 flex flex-col py-16">
-                        <div class="laptop:w-3/4">
 
-                            <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</h3>
-                            <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet feugiat.
-                                Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget odio
-                                quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
-                                scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu, accumsan
-                                interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
-                            <a href=""
-                               class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
-                                <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
-                                <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
-                        <div
-                            class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
-                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
-                            <img class="w-full object-center object-cover h-full" src="{{ asset('assets/files/images/landing/background.jpg') }}">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-row portfolio-slide gap-x-24" data-slide-duration="1000">
-                    <div class="relative flex-1 flex flex-col py-16">
-                        <div class="laptop:w-3/4">
-
-                            <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</h3>
-                            <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet feugiat.
-                                Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget odio
-                                quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
-                                scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu, accumsan
-                                interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
-                            <a href=""
-                               class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
-                                <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
-                                <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
-                        <div class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
-                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
-                            <img class="w-full object-center object-cover h-full" src="{{ asset('assets/files/images/landing/background.jpg') }}">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-row portfolio-slide gap-x-24" data-slide-duration="1000">
-                    <div class="relative flex-1 flex flex-col py-16">
-                        <div class="laptop:w-3/4">
-
-                            <h3 class="font-bold text-2xl pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</h3>
-                            <p class="font-light text-base pb-10">Donec sollicitudin ullamcorper mi sit amet feugiat.
-                                Integer egestas fermentum libero, ullamcorper lacinia augue luctus ut. Aliquam eget odio
-                                quis nunc volutpat hendrerit a viverra nibh. Aenean fermentum tellus sit amet quam
-                                scelerisque, quis ultricies quam euismod. Nulla risus risus, varius eget ex eu, accumsan
-                                interdum nibh. Aenean scelerisque eros quam, ac dapibus justo porttitor non…</p>
-                            <a href=""
-                               class="inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
-                                <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
-                                <img class="scale-50" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
-                        <div
-                            class="absolute flex justify-center items-center top-4 right-4 rounded-full bg-black/75 w-10 h-10 border border-white">
-                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="20" y1="55" x2="60" y2="30" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="35" y1="39" x2="20" y2="29" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                                <line x1="60" y1="57" x2="45" y2="47" stroke="white" stroke-width="2"
-                                      stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <div class="h-full w-auto overflow-hidden min-h-1/2 max-h-1/2">
-                            <img class="w-full object-center object-cover h-full" src="{{ asset('assets/files/images/landing/background.jpg') }}">
-                        </div>
-                    </div>
-                </div>
 
                 <div class="w-full h-auto flex flex-row justify-center items-center gap-x-4">
                     <ul class="flex flex-row justify-center items-center gap-x-4">
@@ -203,7 +224,8 @@
                     </ul>
                     <div class="bg-white h-px rounded-full w-24"></div>
                     <a href="#" class="text-lg list-none text-white bg-transparent no-underline roll-link">
-                        <span class="block relative transition-all" data-title="{{ __("messages.homepage.portfolio.slider.view_all") }}">{{ __("messages.homepage.portfolio.slider.view_all") }}</span>
+                        <span class="block relative transition-all"
+                              data-title="{{ __("messages.homepage.portfolio.slider.view_all") }}">{{ __("messages.homepage.portfolio.slider.view_all") }}</span>
                     </a>
                 </div>
             </div>
