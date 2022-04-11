@@ -87,6 +87,7 @@ function showSlide(slide) {
     let slideElement = slides.get(slide - 1);
     slides.each(function() {
         $(this).removeClass("active-portfolio-slide");
+        $(this).find('img').fadeTo(500, 1);
     });
     $(slideElement).addClass("active-portfolio-slide");
 

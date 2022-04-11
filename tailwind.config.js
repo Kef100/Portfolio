@@ -11,9 +11,11 @@ module.exports = {
     theme: {
         minHeight: {
             '1/2': '50vh',
+            '3/4': '75vh',
         },
         maxHeight: {
             '1/2': '50vh',
+            '3/4': '75vh',
         },
         screens: {
             'mobile-sm': {'min': '320px'},

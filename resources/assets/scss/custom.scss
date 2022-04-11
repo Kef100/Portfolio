@@ -28,14 +28,32 @@ html {
 ///////////////////////////
 ///////Slider Styles///////
 ///////////////////////////
-.portfolio-slide{
+.portfolio-slide {
     transition: opacity 200ms;
     opacity: 0;
 }
 
-.active-portfolio-slide{
+.active-portfolio-slide {
     transition: opacity 200ms;
     opacity: 1;
+}
+
+.active-portfolio-slide img {
+    transition: opacity 200ms 1500ms;
+    opacity: 1;
+}
+
+.active-portfolio-slide .cover {
+    animation: next 500ms ease forwards 200ms;
+}
+
+@keyframes next {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
 }
 
 ///////////////////////////
