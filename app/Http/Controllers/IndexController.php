@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Portfolio;
+
 class IndexController
 {
 
     public function index()
     {
-        return view('index.index');
+        $slides = Portfolio::take(4)->get();
+        return view('index.index', compact('slides'));
     }
 }
