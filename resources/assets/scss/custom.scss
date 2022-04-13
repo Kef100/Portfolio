@@ -28,31 +28,73 @@ html {
 ///////////////////////////
 ///////Slider Styles///////
 ///////////////////////////
-.portfolio-slide {
+.portfolio-slide .top-cover,
+.portfolio-slide .bottom-cover{
+    transform: translateX(-100%);
+}
+
+.active-portfolio-slide .slide-img{
+    transition: opacity 200ms 1s;
+    opacity: 1;
+}
+
+.portfolio-slide .slide-content{
+    transition: opacity 200ms;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.fade-active-slide .slide-img,
+.portfolio-slide .slide-img{
     transition: opacity 200ms;
     opacity: 0;
 }
 
-.active-portfolio-slide {
-    transition: opacity 200ms;
+.active-portfolio-slide .slide-content{
+    transition: opacity 400ms 1.25s;
     opacity: 1;
+    pointer-events: all;
+    z-index: 30;
 }
 
-.active-portfolio-slide img {
-    transition: opacity 200ms 1500ms;
-    opacity: 1;
+.active-portfolio-slide .slide-content h3,
+.active-portfolio-slide .slide-content p.font-light,
+.active-portfolio-slide .slide-content a{
+    opacity: 0;
 }
 
-.active-portfolio-slide .cover {
-    animation: next 500ms ease forwards 200ms;
+.active-portfolio-slide .slide-content h3{
+    animation: slide-in-left 500ms cubic-bezier(0.26, 1, 1, 1)  1.25s forwards;
 }
 
-@keyframes next {
-    from {
-        transform: translateX(-100%);
+.active-portfolio-slide .slide-content p.font-light{
+    animation: slide-in-left 500ms cubic-bezier(0.26, 1, 1, 1)  1.75s forwards;
+}
+
+.active-portfolio-slide .slide-content a{
+    animation: slide-in-left 500ms cubic-bezier(0.26, 1, 1, 1)  2.25s forwards;
+}
+
+.active-portfolio-slide .slide-img{
+    transition: opacity 400ms 1.25s;
+    opacity:1;
+}
+
+.fade-active-slide .top-cover,
+.active-portfolio-slide .bottom-cover {
+    transition: transform 1s 200ms;
+    transform: translateX(100%);
+}
+
+@keyframes slide-in-left {
+    from{
+        left: 75%;
+        opacity: 0;
     }
-    to {
-        transform: translateX(100%);
+    to{
+        left: 0;
+        opacity: 1;
     }
 }
 
