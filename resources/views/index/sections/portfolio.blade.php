@@ -26,7 +26,7 @@
                                 <div class="laptop:w-5/6 desktop:w-3/4 relative">
 
                                     <h3 class="relative font-bold text-2xl pb-6">{{$slide->title}}</h3>
-                                    <p class="relative font-light text-base laptop:mb-5 desktop:mb-0 desktop:pb-10 laptop:h-1/2 overflow-hidden desktop:h-full">{{$slide->description}}</p>
+                                    <p class="relative font-light text-base mb-6 laptop:h-1/2 overflow-hidden desktop:h-auto">{{$slide->description}}</p>
                                     <a href=""
                                        class="relative inline-flex z-20 w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 desktop:text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
                                         <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
