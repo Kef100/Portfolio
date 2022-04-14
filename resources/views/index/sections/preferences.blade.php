@@ -19,53 +19,23 @@
             <h2 class="text-stone-500 laptop:text-3xl desktop:text-4xl">{{ __("messages.homepage.preferences.tasks_i_love") }}</h2>
         </div>
 
-        {{--        TODO: Foreach interests--}}
         <div class="flex flex-row w-3/4 space-x-16 h-auto justify-evenly items-center">
-            <div
-                class="flex flex-col gap-y-4 secondary-background border border-gray-200 px-10 py-6 rounded-md backdrop-blur w-full h-auto">
+            @foreach($preferences as $preference)
+            <div class="flex flex-col gap-y-4 secondary-background border border-gray-200 px-10 py-6 rounded-md backdrop-blur w-full h-auto">
                 <div
                     class="rounded-full flex justify-center items-center p-3 h-14 w-14 primary-background border border-primary">
                     <img class="select-none w-12 h-12 pointer-events-none"
-                         src="{{ asset('assets/files/images/landing/icons/triangle ruler.svg')}}" alt="ruler">
+                         src="{{ asset('assets/files/images/landing/icons/' . $preference->icon)}}" alt="ruler">
                 </div>
                 <div class="w-full h-1 bg-white rounded-full">
                     <div class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
                 </div>
                 <div class="flex flex-col gap-y-2">
-                    <h3 class="laptop:text-xl desktop:text-2xl font-bold">{{ __("messages.homepage.preferences.website_design.title") }}</h3>
-                    <p class="text-stone-300">{{ __("messages.homepage.preferences.website_design.text") }}</p>
+                    <h3 class="laptop:text-xl desktop:text-2xl font-bold">{{ $preference->title }}</h3>
+                    <p class="text-stone-300">{{ $preference->description }}</p>
                 </div>
             </div>
-            <div
-                class="flex flex-col gap-y-4 secondary-background border border-gray-200 px-10 py-6 rounded-md backdrop-blur w-full h-auto">
-                <div
-                    class="rounded-full flex justify-center items-center p-3 h-14 w-14 primary-background border border-primary">
-                    <img class="select-none w-12 h-12 pointer-events-none"
-                         src="{{ asset('assets/files/images/landing/icons/terminal.svg')}}" alt="terminal">
-                </div>
-                <div class="w-full h-1 bg-white rounded-full">
-                    <div class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
-                </div>
-                <div class="flex flex-col gap-y-2">
-                    <h3 class="laptop:text-xl desktop:text-2xl font-bold">{{ __("messages.homepage.preferences.programming.title") }}</h3>
-                    <p class="text-stone-300">{{ __("messages.homepage.preferences.programming.text") }}</p>
-                </div>
-            </div>
-            <div
-                class="flex flex-col gap-y-4 secondary-background border border-gray-200 px-10 py-6 rounded-md backdrop-blur w-full h-auto">
-                <div
-                    class="rounded-full flex justify-center items-center p-3 h-14 w-14 primary-background border border-primary">
-                    <img class="select-none w-12 h-12 pointer-events-none"
-                         src="{{ asset('assets/files/images/landing/icons/puzzle.svg')}}" alt="puzzle">
-                </div>
-                <div class="w-full h-1 bg-white rounded-full">
-                    <div class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
-                </div>
-                <div class="flex flex-col gap-y-2">
-                    <h3 class="laptop:text-xl desktop:text-2xl font-bold">{{ __("messages.homepage.preferences.creating_components.title") }}</h3>
-                    <p class="text-stone-300">{{ __("messages.homepage.preferences.creating_components.text") }}</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <svg class="absolute fill-secondary -bottom-px" x="0" y="0" width="100%" height="110"
