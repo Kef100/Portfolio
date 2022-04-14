@@ -103,9 +103,9 @@ function showBullet(slide) {
 }
 
 function nextSlide(slide) {
+    showSlide(slide + 1);
+    showBullet(slide);
     sliderIndex++;
-    showSlide(sliderIndex);
-    showBullet(sliderIndex - 1);
 }
 
 function previousSlide(slide) {
@@ -120,9 +120,7 @@ function goToSlide(slide) {
     if (slide !== sliderIndex) {
         clearInterval(interval);
         i = 0;
-        let currentElement = slides.get(sliderIndex - 1);
-        $(currentElement).removeClass("active-portfolio-slide");
-        $(currentElement).addClass("fade-active-slide");
+        fadeSlide(sliderIndex - 1);
         setTimeout(function () {
             showSlide(slide);
             showBullet(slide - 1);
@@ -131,10 +129,15 @@ function goToSlide(slide) {
     }
 }
 
+function fadeSlide(slide) {
+    let currentElement = slides.get(slide);
+    $(currentElement).removeClass("active-portfolio-slide");
+    $(currentElement).addClass("fade-active-slide");
+}
+
 
 function startCounter(time, slide) {
     let bullet = bullets.get(slide - 1);
-    let slideElement = slides.get(slide - 1);
     let isFading = false;
 
     interval = setInterval(function () {
@@ -155,8 +158,7 @@ function startCounter(time, slide) {
 
         if(i / time * 100 > 85 && !isFading) {
             isFading = true;
-            $(slideElement).removeClass("active-portfolio-slide");
-            $(slideElement).addClass("fade-active-slide");
+            fadeSlide(slide - 1);
         }
         $(bullet).find("svg circle:nth-child(2)").css('stroke-dashoffset', dasharray - ((i + 1) * (dasharray / time)));
         i++;
@@ -167,19 +169,15 @@ $("#nextSlide").click(function () {
     if (slides.length >= (sliderIndex + 1)) {
         clearInterval(interval);
         i = 0;
-        let slideElement = slides.get(sliderIndex - 1);
-        $(slideElement).removeClass("active-portfolio-slide");
-        $(slideElement).addClass("fade-active-slide");
+        fadeSlide(sliderIndex - 1);
         setTimeout(function () {
-            nextSlide(sliderIndex - 1);
+            nextSlide(sliderIndex);
         }, 1000);
     }else{
         clearInterval(interval);
         i = 0;
         sliderIndex = 0;
-        let slideElement = slides.get(slides.length - 1);
-        $(slideElement).removeClass("active-portfolio-slide");
-        $(slideElement).addClass("fade-active-slide");
+        fadeSlide(slides.length - 1);
         setTimeout(function () {
             nextSlide(0);
         }, 1000);
@@ -190,9 +188,7 @@ $("#previousSlide").click(function () {
     if ((sliderIndex - 1) >= 1) {
         clearInterval(interval);
         i = 0;
-        let slideElement = slides.get(sliderIndex);
-        $(slideElement).removeClass("active-portfolio-slide");
-        $(slideElement).addClass("fade-active-slide");
+        fadeSlide(sliderIndex - 1);
         setTimeout(function () {
             previousSlide(sliderIndex);
         }, 1000);
@@ -200,9 +196,7 @@ $("#previousSlide").click(function () {
         clearInterval(interval);
         sliderIndex = slides.length + 1;
         i = 0;
-        let slideElement = slides.get(slides.length - 1);
-        $(slideElement).removeClass("active-portfolio-slide");
-        $(slideElement).addClass("fade-active-slide");
+        fadeSlide(0);
         setTimeout(function () {
             previousSlide(slides.length);
         }, 1000);

@@ -13,32 +13,33 @@
         class="before:content-[''] before:absolute laptop:before:right-16 desktop:before:right-48 before:top-12 before:bg-no-repeat before:bg-triangle before:w-24 before:h-28"></div>
 
     <div class="flex relative justify-center items-center">
-        <div class="relative flex justify-between items-center laptop:w-3/4 desktop:w-1/2 h-full">
+        <div class="relative flex justify-between items-center w-1/2 h-full">
             <div class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer" id="previousSlide">
                 <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
             </div>
             <div class="flex flex-col gap-y-12 overflow-hidden w-full">
-                <div class="w-full overflow-auto laptop:min-h-1/2 h-full">
+                <div class="w-full overflow-hidden laptop:min-h-1/2 relative h-full">
                     @foreach($slides as $slide)
-                        <div class="flex flex-row absolute portfolio-slide gap-x-24" data-slide-duration="{{$slide->duration}}">
+                        <div class="flex flex-row absolute portfolio-slide gap-x-24 h-[inherit]"
+                             data-slide-duration="{{$slide->duration}}">
                             <div class="slide-content relative flex-1 flex flex-col laptop:py-2 desktop:py-16">
                                 <div class="laptop:w-5/6 desktop:w-3/4 relative">
 
                                     <h3 class="relative font-bold text-2xl pb-6">{{$slide->title}}</h3>
-                                    <p class="relative font-light text-base pb-10">{{$slide->description}}</p>
+                                    <p class="relative font-light text-base laptop:mb-5 desktop:mb-0 desktop:pb-10 laptop:h-1/2 overflow-hidden desktop:h-full">{{$slide->description}}</p>
                                     <a href=""
-                                       class="relative inline-flex z-20 w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                       class="relative inline-flex z-20 w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 desktop:text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
                                         <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
                                         <img class="scale-50"
                                              src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                                     </a>
                                 </div>
                             </div>
-                            <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-auto">
+                            <div class="relative flex-1 w-auto overflow-hidden rounded-lg h-full">
                                 <div class="h-full w-auto overflow-hidden laptop:min-h-1/2 laptop:max-h-1/2">
                                     <div class="top-cover w-full absolute h-full bg-secondary-600"></div>
                                     <div class="bottom-cover w-full absolute h-full bg-secondary-600"></div>
-                                    <img class="slide-img w-full object-center object-cover h-full"
+                                    <img class="slide-img absolute w-full object-center object-cover h-full"
                                          src="{{ asset('assets/files/images/uploaded/slider/' . $slide->image) }}">
                                 </div>
                             </div>
