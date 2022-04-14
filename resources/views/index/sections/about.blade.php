@@ -18,7 +18,7 @@
         <div class="flex-1 relative z-20">
             <div class="w-2/3 mb-6 flex flex-col gap-y-4 bg-secondary-700/75 p-8 backdrop-blur-sm rounded-md">
                 <div class="flex flex-row justify-between">
-                    <h3 class="uppercase laptop:text-5xl desktop:text-6xl font-bold">{{__("messages.homepage.about.content_title.start")}}
+                    <h3 class="uppercase laptop:text-4xl desktop:text-6xl font-bold">{{__("messages.homepage.about.content_title.start")}}
                         <br> <span
                             class="outlined-white">{{__("messages.homepage.about.content_title.outlined")}}</span><br> {{__("messages.homepage.about.content_title.end")}}
                     </h3>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <a href="{{ url("/cv") }}"
-               class="inline-flex w-fit justify-center mb-6 space-x-2 items-center primary-background primary-background-hover transition-all z-20 text-2xl border border-primary-200 rounded-full px-8 py-2 backdrop-blur">
+               class="inline-flex w-fit justify-center mb-6 space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
                 <p>{{__("messages.homepage.about.cv")}}</p>
                 <img class="scale-75" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
             </a>
