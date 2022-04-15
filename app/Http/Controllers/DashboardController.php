@@ -6,11 +6,11 @@ class DashboardController
 {
     public function login()
     {
-        return view('admin.login');
+        return view('auth.login');
     }
 
     public function index()
     {
-        return view('admin.dashboard');
+        return view('auth.dashboard');
     }
 }
