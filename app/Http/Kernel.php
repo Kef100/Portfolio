@@ -84,8 +84,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => Authenticate::class,
-        'auth.basic' => AuthenticateWithBasicAuth::class,
+        'admin' => Authenticate::class,
+        'admin.basic' => AuthenticateWithBasicAuth::class,
 
         'localize'                => LaravelLocalizationRoutes::class,
         'localizationRedirect'    => LaravelLocalizationRedirectFilter::class,

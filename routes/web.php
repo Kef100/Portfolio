@@ -38,10 +38,11 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
     //Admin Routes
 
     //Login
-    Route::get('/admin', [DashboardController::class, 'login'])->name('login');
+    Route::get('/admin', [DashboardController::class, 'index'])->name('login');
+    Route::post('/admin', [DashboardController::class, 'login'])->name('login');
 
     //Dashboard
-    Route::middleware(['auth'])->group(function () {
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     });
 });
