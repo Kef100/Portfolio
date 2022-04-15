@@ -36,15 +36,12 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        if(Auth::check()){
-            return redirect('dashboard');
-        }
         $this->middleware('guest')->except('logout');
 
     }
 
     public function logout() {
         Auth::logout();
-        return redirect('/')->with('success', 'Logged out.');
+        return redirect('/admin')->with('success', 'You are logged out!');
     }
 }

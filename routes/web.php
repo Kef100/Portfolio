@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
@@ -40,6 +41,7 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
     //Login
     Route::get('/admin', [DashboardController::class, 'index'])->name('login');
     Route::post('/admin', [DashboardController::class, 'login'])->name('login');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     //Dashboard
     Route::middleware(['admin'])->group(function () {
