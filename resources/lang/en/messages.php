@@ -79,4 +79,8 @@ return [
         ],
     ],
 
+    'admin' => [
+        'login' => 'login',
+        'remember' => 'Remember me',
+    ],
 ];

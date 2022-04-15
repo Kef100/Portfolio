@@ -1,5 +1,5 @@
 <div id="preloader" class="h-full w-full relative bg-secondary-500">
-    <div class="container h-screen">
+    <div class="container my-0 mx-auto h-screen">
         <div class="grid pt-10 w-full h-full">
             <div class="flex relative w-full h-full justify-center items-center">
                 <div class="laptop:scale-110 desktop:scale-150 relative pointer-events-none select-none z-10">

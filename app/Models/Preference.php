@@ -9,8 +9,6 @@ class Preference extends Model
 {
     use HasFactory;
 
-    protected $table = 'preference';
-
     /**
      * The attributes that are mass assignable.
      *

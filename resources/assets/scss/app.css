@@ -2,13 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.flag-path{
+:root {
+    --primary-color: #857852;
+    --from-primary-linear: rgba(133, 120, 82, 0.4);
+    --to-primary-linear: rgba(75, 85, 99, 0.2);
+
+    --from-secondary-linear: rgba(107, 114, 128, 0.4);
+    --to-secondary-linear: rgba(75, 85, 99, 0.2);
+}
+
+input {
+    accent-color: var(--primary-color);
+}
+
+.flag-path {
     clip-path: polygon(43% 0, 100% 0%, 100% 100%, 15% 100%);
 }
 
-.outlined{
-    color: #857852;
-    background: -webkit-linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.2));
+.outlined {
+    color: var(--primary-color);
+    background: -webkit-linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
@@ -49,12 +62,12 @@
     background-position: 95% 50%;
 }
 
-.primary-background{
-    background: linear-gradient(90deg, rgba(133, 120, 82, 0.4), rgba(98, 89, 61, 0.2) 51%, rgba(133, 120, 82, 0.4)) var(--x, 0)/ 200%;
+.primary-background {
+    background: linear-gradient(90deg, var(--from-primary-linear), var(--to-primary-linear) 51%, var(--from-primary-linear)) var(--x, 0)/ 200%;
 }
 
-.secondary-background{
-    background: linear-gradient(90deg, rgba(107, 114, 128, 0.4), rgba(75, 85, 99, 0.2) 51%, rgba(107, 114, 128, 0.4)) var(--x, 0)/ 200%;
+.secondary-background {
+    background: linear-gradient(90deg, var(--from-secondary-linear), var(--to-secondary-linear) 51%, var(--from-secondary-linear)) var(--x, 0)/ 200%;
 }
 
 .primary-background-hover:hover,

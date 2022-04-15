@@ -79,4 +79,9 @@ return [
             ]
         ],
     ],
+
+    'admin' => [
+        'login' => 'inloggen',
+        'remember' => 'Onthoud mij',
+    ],
 ];

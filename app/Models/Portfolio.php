@@ -9,8 +9,6 @@ class Portfolio extends Model
 {
     use HasFactory;
 
-    protected $table = 'portfolio';
-
     /**
      * The attributes that are mass assignable.
      *
@@ -22,4 +20,9 @@ class Portfolio extends Model
         'image',
         'duration',
     ];
+
+    public function language()
+    {
+        return $this->belongsTo(Language::class);
+    }
 }

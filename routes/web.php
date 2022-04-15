@@ -18,6 +18,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+//General Routes
 Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->group(function () {
 
 //  Home
@@ -34,6 +35,12 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
         return view('admin.login');
     })->name('admin');
 
+    //Admin Routes
+
+    //Login
+    Route::get('/admin', [DashboardController::class, 'login'])->name('login');
+
+    //Dashboard
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     });
