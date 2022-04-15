@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #857852;
+    --from-primary-linear: rgba(133, 120, 82, 0.4);
+    --to-primary-linear: rgba(75, 85, 99, 0.2);
+
+    --from-secondary-linear: rgba(107, 114, 128, 0.4);
+    --to-secondary-linear: rgba(75, 85, 99, 0.2);
+}
+
+input {
+    accent-color: var(--primary-color);
+}
+
+.flag-path {
+    clip-path: polygon(43% 0, 100% 0%, 100% 100%, 15% 100%);
+}
+
+.outlined {
+    color: var(--primary-color);
+    background: -webkit-linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #857852;
+}
+
+.outlined-white{
+    color: white;
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.pulse{
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(133, 120, 82, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(133, 120, 82, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(133, 120, 82, 0);
+    }
+}
+
+.bg-right{
+    background-position: 95% 50%;
+}
+
+.primary-background {
+    background: linear-gradient(90deg, var(--from-primary-linear), var(--to-primary-linear) 51%, var(--from-primary-linear)) var(--x, 0)/ 200%;
+}
+
+.secondary-background {
+    background: linear-gradient(90deg, var(--from-secondary-linear), var(--to-secondary-linear) 51%, var(--from-secondary-linear)) var(--x, 0)/ 200%;
+}
+
+.primary-background-hover:hover,
+.secondary-background-hover:hover{
+    --x: 100%;
+}

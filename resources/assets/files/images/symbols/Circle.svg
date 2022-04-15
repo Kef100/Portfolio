@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #564e39;
+      }
+
+      .cls-2 {
+        fill: #857852;
+      }
+    </style>
+  </defs>
+  <g id="Circle" transform="translate(-1752 -1113)">
+    <circle id="bottom" class="cls-1" cx="17.5" cy="17.5" r="17.5" transform="translate(1752 1117)"/>
+    <circle id="top" class="cls-2" cx="17.5" cy="17.5" r="17.5" transform="translate(1757 1113)"/>
+  </g>
+</svg>
