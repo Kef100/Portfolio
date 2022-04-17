@@ -63,6 +63,7 @@ module.exports = {
             backgroundImage: {
                 'landing': "url('/assets/files/images/landing/background.jpg')",
                 'about': "url('/assets/files/images/landing/about.jpg')",
+                'testimonials': "url('/assets/files/images/landing/testimonials.jpg')",
                 'circle': "url('/assets/files/images/symbols/Circle.svg')",
                 'triangle': "url('/assets/files/images/symbols/triangle.svg')",
                 'cross': "url('/assets/files/images/symbols/X.svg')",

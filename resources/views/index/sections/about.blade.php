@@ -43,9 +43,9 @@
                 </div>
             </div>
             <a href="{{ url("/cv") }}"
-               class="inline-flex w-fit justify-center mb-6 space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
+               class="group inline-flex w-fit justify-center mb-6 space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
                 <p>{{__("messages.homepage.about.cv")}}</p>
-                <img class="scale-75" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                <img class="scale-75 group-hover:pl-2 transition-all" src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
             </a>
         </div>
     </div>

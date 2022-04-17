@@ -16,6 +16,7 @@ return [
         'about' => 'About',
         'portfolio' => 'Portfolio',
         'testimonials' => 'Testimonials',
+        'dashboard' => 'Dashboard',
         'cv' => 'My cv',
         'lets_chat' => "Let's chat!",
     ],
@@ -75,6 +76,15 @@ return [
             'slider' => [
                 'read_more' => "Read more",
                 'view_all' => "View all posts",
+            ]
+        ],
+
+        'testimonials' => [
+            'heading' => "Testimonials",
+            'title' => "What Customers Say",
+            'subtitle' => "What customers say about me",
+            'slider' => [
+                'view_all' => "View all reviews",
             ]
         ],
     ],

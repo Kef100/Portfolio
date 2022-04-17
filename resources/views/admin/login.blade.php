@@ -42,7 +42,7 @@
                     </div>
                     <div class="tablet:w-3/4">
                         <div class="form-check flex items-center">
-                            <input class="form-check-input w-4 h-4 mr-1" type="checkbox" name="remember"
+                            <input class="form-check-input w-4 h-4 mr-1" checked type="checkbox" name="remember"
                                    id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
@@ -57,6 +57,9 @@
                             <img class="scale-50"
                                  src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                         </button>
+                    </div>
+                    <div class="slide-in">
+                        <a href="{{ url("/") }}">Go back to the <span class="text-primary-300">website</span></a>
                     </div>
                 </form>
             </div>

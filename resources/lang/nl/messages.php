@@ -16,6 +16,7 @@ return [
         'about' => 'Over mij',
         'portfolio' => 'Portfolio',
         'testimonials' => 'Referenties',
+        'dashboard' => 'Dashboard',
         'cv' => 'Mijn cv',
         'lets_chat' => "Gesprek plannen?",
     ],
@@ -76,6 +77,15 @@ return [
             'slider' => [
                 'read_more' => "Lees meer",
                 'view_all' => "Bekijk alle posts",
+            ]
+        ],
+
+        'testimonials' => [
+            'heading' => "Referenties",
+            'title' => "Wat Klanten Zeggen",
+            'subtitle' => "Wat klanten over mij zeggen",
+            'slider' => [
+                'view_all' => "Bekijk alle referenties",
             ]
         ],
     ],

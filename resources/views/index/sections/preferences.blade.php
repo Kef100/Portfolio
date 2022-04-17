@@ -8,11 +8,11 @@
         <rect fill="url(#diagonalHatch)" x="0" y="0" width="100%" height="100%"></rect>
     </svg>
     <div
-        class="after:content-[''] after:absolute after:left-36 after:top-24 after:bg-no-repeat after:bg-triangle after:w-24 after:h-28"></div>
+        class="hover-animation after:content-[''] after:absolute after:left-36 after:top-24 after:bg-no-repeat after:bg-triangle after:w-24 after:h-28"></div>
     <div
-        class="after:content-[''] after:absolute after:left-24 after:bottom-10 after:bg-no-repeat after:bg-cross after:w-24 after:h-24"></div>
+        class="hover-animation after:content-[''] after:absolute after:left-24 after:bottom-10 after:bg-no-repeat after:bg-cross after:w-24 after:h-24"></div>
     <div
-        class="after:content-[''] after:absolute after:right-24 after:top-12 after:bg-no-repeat after:bg-circle after:w-10 after:h-10"></div>
+        class="hover-animation after:content-[''] after:absolute after:right-24 after:top-12 after:bg-no-repeat after:bg-circle after:w-10 after:h-10"></div>
     <div class="flex flex-col gap-y-24 pb-40 justify-center items-center">
         <div class="flex justify-center z-10 gap-y-2 items-center flex-col">
             <h2 class="font-bold laptop:text-4xl desktop:text-5xl">{{ __("messages.homepage.preferences.what_i_enjoy") }}</h2>

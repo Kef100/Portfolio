@@ -22,8 +22,7 @@ class DashboardController
 
             return redirect('/dashboard')->with('success', 'You are logged in!');
         }
-
-        return view('admin.login');
+        return redirect('/admin')->with('error', 'Invalid credentials!');
     }
 
     public function dashboard()

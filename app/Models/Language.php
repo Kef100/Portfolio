@@ -20,4 +20,9 @@ class Language extends Model
     {
         return $this->hasMany(Portfolio::class, "language_id");
     }
+
+    public function testimonial()
+    {
+        return $this->hasMany(Testimonial::class, "language_id");
+    }
 }

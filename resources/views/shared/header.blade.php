@@ -14,6 +14,11 @@
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
            href="#"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.testimonials') }}">{{ __('messages.navigation.testimonials') }}</span></a>
+        @if(Auth::check() && Auth::user()->role == "admin")
+        <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
+           href="{{ url("/admin") }}"><span class="block relative transition-all"
+                          data-title="{{ __('messages.navigation.dashboard') }}">{{ __('messages.navigation.dashboard') }}</span></a>
+        @endif
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
            href="#"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.cv') }}">{{ __('messages.navigation.cv') }}</span></a>

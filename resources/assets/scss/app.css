@@ -9,6 +9,9 @@
 
     --from-secondary-linear: rgba(107, 114, 128, 0.4);
     --to-secondary-linear: rgba(75, 85, 99, 0.2);
+
+    --from-secondary-alt-linear: rgba(101, 101, 101, 0.3);
+    --to-secondary-alt-linear: rgba(101, 101, 101, 0.1);
 }
 
 input {
@@ -70,7 +73,65 @@ input {
     background: linear-gradient(90deg, var(--from-secondary-linear), var(--to-secondary-linear) 51%, var(--from-secondary-linear)) var(--x, 0)/ 200%;
 }
 
+.secondary-alt-background {
+    background: linear-gradient(90deg, var(--from-secondary-alt-linear), var(--to-secondary-alt-linear));
+}
+
 .primary-background-hover:hover,
 .secondary-background-hover:hover{
     --x: 100%;
+}
+
+.hover-animation:after{
+    animation: loop 2s ease-in-out infinite;
+}
+
+.hover-animation:nth-child(2):after{
+    animation-delay: 1s;
+}
+
+.hover-animation:nth-child(4):after{
+    animation-delay: 500ms;
+}
+
+@keyframes loop{
+    0%{
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+    }
+}
+
+.slide-in {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+.slide-in a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 0 2px 0;
+    position: relative;
+}
+.slide-in a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.slide-in a:hover:after {
+    width: 100%;
+    left: 0;
 }

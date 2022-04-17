@@ -6,11 +6,11 @@
         </div>
     </div>
     <div
-        class="before:content-[''] before:absolute laptop:before:left-24 desktop:before:left-36 before:top-32 before:bg-no-repeat before:bg-cross before:w-24 before:h-24"></div>
+        class="hover-animation after:content-[''] after:absolute laptop:after:left-24 desktop:after:left-36 after:top-32 after:bg-no-repeat after:bg-cross after:w-24 after:h-24"></div>
     <div
-        class="before:content-[''] before:absolute before:left-24 before:bottom-10 before:bg-no-repeat before:bg-circle before:w-10 before:h-10"></div>
+        class="hover-animation after:content-[''] after:absolute after:left-24 after:bottom-10 after:bg-no-repeat after:bg-circle after:w-10 after:h-10"></div>
     <div
-        class="before:content-[''] before:absolute laptop:before:right-16 desktop:before:right-48 before:top-12 before:bg-no-repeat before:bg-triangle before:w-24 before:h-28"></div>
+        class="hover-animation after:content-[''] after:absolute laptop:after:right-16 desktop:after:right-48 after:top-12 after:bg-no-repeat after:bg-triangle after:w-24 after:h-28"></div>
 
     <div class="flex relative justify-center items-center">
         <div class="relative flex justify-between items-center w-1/2 h-full">
@@ -28,9 +28,9 @@
                                     <h3 class="relative font-bold text-2xl pb-6">{{$slide->title}}</h3>
                                     <p class="relative font-light text-base mb-6 laptop:h-1/2 overflow-hidden desktop:h-auto">{{$slide->description}}</p>
                                     <a href=""
-                                       class="relative inline-flex z-20 w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 desktop:text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                                       class="group relative inline-flex z-20 w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 desktop:text-lg border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
                                         <p>{{__("messages.homepage.portfolio.slider.read_more")}}</p>
-                                        <img class="scale-50"
+                                        <img class="scale-50 group-hover:pl-2 transition-all"
                                              src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                                     </a>
                                 </div>

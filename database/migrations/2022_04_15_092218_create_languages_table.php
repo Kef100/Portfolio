@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Language;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class CreateLanguagesTable extends Migration
 {
@@ -19,6 +21,13 @@ class CreateLanguagesTable extends Migration
             $table->string('locale')->unique();
             $table->timestamps();
         });
+
+        foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties){
+            $language = new Language();
+            $language->name = $properties['native'];
+            $language->locale = $localeCode;
+            $language->save();
+        }
     }
 
     /**

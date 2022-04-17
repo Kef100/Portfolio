@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
 use App\Models\Preference;
+use App\Models\Testimonial;
 
 class IndexController
 {
@@ -12,7 +13,8 @@ class IndexController
     {
         $slides = Portfolio::take(4)->orderBy('created_at', 'desc')->get();
         $preferences = Preference::take(3)->orderBy('created_at', 'desc')->get();
+        $testimonials = Testimonial::take(5)->orderBy('created_at', 'desc')->get();
 
-        return view('index.index', compact('slides', 'preferences'));
+        return view('index.index', compact('slides', 'preferences', 'testimonials'));
     }
 }
