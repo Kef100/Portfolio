@@ -93,5 +93,11 @@ return [
     'admin' => [
         'login' => 'inloggen',
         'remember' => 'Onthoud mij',
+        'email' => 'Email',
+        'password' => 'Wachtwoord',
+        'go_back' => [
+            "to" => "Ga terug naar de",
+            "website" => "website",
+        ],
     ],
 ];

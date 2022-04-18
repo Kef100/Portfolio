@@ -10,7 +10,7 @@ class DashboardController
     public function index()
     {
         if(Auth::check()) {
-            return view('admin.dashboard');
+            return redirect('/dashboard');
         }
         return view('admin.login');
     }
@@ -20,7 +20,7 @@ class DashboardController
         if (Auth::attempt(["email" => $request->email, "password" => $request->password], $request->remember)) {
             $request->session()->regenerate();
 
-            return redirect('/dashboard')->with('success', 'You are logged in!');
+            return redirect('/dashboard')->with('success', 'You have been logged in!');
         }
         return redirect('/admin')->with('error', 'Invalid credentials!');
     }

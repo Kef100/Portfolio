@@ -92,5 +92,11 @@ return [
     'admin' => [
         'login' => 'login',
         'remember' => 'Remember me',
+        'email' => 'Email',
+        'password' => 'Password',
+        'go_back' => [
+            "to" => "Go back to the",
+            "website" => "website",
+        ],
     ],
 ];

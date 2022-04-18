@@ -13,12 +13,13 @@ const mix = require('laravel-mix');
 
 mix.options({processCssUrls: true,})
     .scripts('resources/assets/js/app.js', 'public/assets/js/app.js')
+    .js('resources/assets/js/admin.js', 'public/assets/js/admin.js')
     .js('resources/assets/js/tilt.jquery.js', 'public/assets/js/tilt.jquery.js')
     .js('resources/assets/js/developer.js', 'public/assets/js/developer.js')
     .postCss('resources/assets/scss/app.css', 'public/assets/css', [
         require("tailwindcss"),
     ])
     .sass('resources/assets/scss/custom.scss', 'public/assets/css')
-    .copy('resources/assets/files', 'public/assets/files')
+    // .copy('resources/assets/files', 'public/assets/files')
     .version()
     .disableNotifications();

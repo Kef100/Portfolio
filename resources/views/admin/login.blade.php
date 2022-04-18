@@ -12,7 +12,7 @@
                       action="{{ route('login') }}">
                     @csrf
                     <div class="tablet:w-3/4">
-                        <label for="email" class="text-left">Email <span class="text-red-500">*</span></label>
+                        <label for="email" class="text-left">{{ __("messages.admin.email") }} <span class="text-red-500">*</span></label>
 
                         <input id="email" type="email"
                                class="w-full p-2 border border-gray-500 text-black rounded-md"
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="tablet:w-3/4">
-                        <label for="password">Wachtwoord <span class="text-red-500">*</span></label>
+                        <label for="password">{{ __("messages.admin.password") }} <span class="text-red-500">*</span></label>
 
                         <input id="password" type="password"
                                placeholder="your password"
@@ -59,7 +59,7 @@
                         </button>
                     </div>
                     <div class="slide-in">
-                        <a href="{{ url("/") }}">Go back to the <span class="text-primary-300">website</span></a>
+                        <a href="{{ url("/") }}">{{ __("messages.admin.go_back.to") }} <span class="text-primary-300">{{ __("messages.admin.go_back.website") }}</span></a>
                     </div>
                 </form>
             </div>
