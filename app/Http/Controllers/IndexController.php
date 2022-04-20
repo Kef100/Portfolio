@@ -6,24 +6,11 @@ use App\Models\Portfolio;
 use App\Models\Preference;
 use App\Models\SpotifyToken;
 use App\Models\Testimonial;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Laravel\Socialite\Facades\Socialite;
 
 class IndexController extends Controller
 {
-    ##
-    #FIXME
-    #https://developer.spotify.com/documentation/general/guides/authorization/client-credentials/
-    #https://developer.spotify.com/documentation/general/guides/authorization/
-    #https://developer.spotify.com/documentation/web-api/
-    #https://developer.spotify.com/console/get-users-currently-playing-track/?market=ES&additional_types=
-    #https://developer.spotify.com/documentation/web-api/reference/#/operations/get-the-users-currently-playing-track
-    #https://developer.spotify.com/documentation/general/guides/authorization/use-access-token/
-    #https://laravel.com/docs/9.x/http-client#headers
-    #https://khalilstemmler.com/articles/tutorials/getting-the-currently-playing-song-spotify/
-    #https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
-    ##
     public function index()
     {
         $slides = Portfolio::take(4)->orderBy('created_at', 'desc')->get();
