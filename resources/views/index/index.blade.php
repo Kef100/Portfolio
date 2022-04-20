@@ -1,6 +1,9 @@
 @extends('layouts.default')
 
+
+
 @section('content')
+    @include('shared.spotify', compact('spotifyData'))
 
     <div id="fullpage" class="overflow-hidden">
         @include('index.sections.landing')

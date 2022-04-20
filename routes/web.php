@@ -24,6 +24,8 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
 
 //  Home
     Route::get('/', [IndexController::class, 'index'])->name('index');
+    Route::get('/spotify', [IndexController::class, 'spotify'])->name('spotify');
+    Route::get('/spotifyCallback', [IndexController::class, 'spotifyCallback'])->name('spotify.callback');
 
 // Contact
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');

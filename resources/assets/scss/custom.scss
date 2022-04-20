@@ -28,6 +28,27 @@ html {
     display: none;
 }
 
+
+///////////////////////////
+////////Rotate Logo////////
+///////////////////////////
+.rotate{
+    animation: rotate 3s linear infinite;
+    animation-play-state: running;
+}
+
+.stop-rotate{
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 ///////////////////////////
 ///////Slider Styles///////
 ///////////////////////////
