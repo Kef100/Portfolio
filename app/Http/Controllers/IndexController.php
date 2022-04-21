@@ -36,9 +36,13 @@ class IndexController extends Controller
             return $this->getCurrentPlaying();
         }
 
+        if ($request->json() == null) {
+            return null;
+        }
+
         $requestJson = $request->json();
 
-        foreach($requestJson['item']['artists'] as $artist) {
+        foreach ($requestJson['item']['artists'] as $artist) {
             $artists[] = $artist['name'];
         }
 

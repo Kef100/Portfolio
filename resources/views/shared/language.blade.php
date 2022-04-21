@@ -1,5 +1,6 @@
 <div id="language-selector">
-    <div class="fixed flex flex-col w-auto desktop:-right-2 z-10 top-1/4 laptop:scale-x-[-1] desktop:scale-x-[1] desktop:left-auto laptop:-left-2">
+    {{--    laptop:scale-x-[-1] desktop:scale-x-[1]--}}
+    <div class="fixed flex flex-col w-auto laptop:-right-2 z-10 laptop:top-[15%] desktop:top-1/4">
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             @if(LaravelLocalization::getCurrentLocale() != $localeCode)
                 <div class="relative -right-2 transition-all ease-in-expo hover:right-0 hover:scale-x-110">

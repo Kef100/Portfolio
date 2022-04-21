@@ -11,6 +11,11 @@ return [
     |
     */
 
+    'spotify' => [
+        "listening" => "Nu aan het luisteren naar",
+        "last_listened" => "Laatsts geluisterd naar",
+    ],
+
     'navigation' => [
         'home' => 'Home',
         'about' => 'Over mij',

@@ -61,7 +61,28 @@ input {
     }
 }
 
-.bg-right{
+.spotify-pulse {
+    animation: spotify-pulse 1.5s ease infinite;
+}
+
+@keyframes spotify-pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.5);
+    }
+
+    80% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(29, 185, 84, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(29, 185, 84, 0);
+    }
+}
+
+.bg-right {
     background-position: 95% 50%;
 }
 

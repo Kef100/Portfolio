@@ -10,6 +10,10 @@ return [
     | The following language lines are used for the custom application
     |
     */
+    'spotify' => [
+        "listening" => "Currently listening to",
+        "last_listened" => "Last listened to",
+    ],
 
     'navigation' => [
         'home' => 'Home',
