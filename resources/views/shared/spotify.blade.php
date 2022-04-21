@@ -27,7 +27,7 @@
             </div>
             <div class="relative">
                 <div class="absolute bg-black opacity-50 z-10 w-full h-full rounded-full top-0 left-0"></div>
-                <div class="absolute z-30 w-full h-full rounded-full top-0 left-0 spotify-pulse"></div>
+                <div class="absolute z-30 w-full h-full rounded-full top-0 left-0  @if($spotifyData['is_playing'])spotify-pulse @endif"></div>
                 <img
                     class="h-20 w-auto rounded-full relative @if($spotifyData['is_playing'])rotate @else stop-rotate @endif"
                     src="{{ $spotifyData['album'] }}" alt="album">

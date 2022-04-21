@@ -11,6 +11,8 @@ use Laravel\Socialite\Facades\Socialite;
 
 class IndexController extends Controller
 {
+    #https://github.com/EricRabil/sactivity
+    #https://www.npmjs.com/package/sactivity
     public function index()
     {
         $slides = Portfolio::take(4)->orderBy('created_at', 'desc')->get();
