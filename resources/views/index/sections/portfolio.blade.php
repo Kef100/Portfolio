@@ -20,8 +20,7 @@
             <div class="flex flex-col gap-y-12 overflow-hidden w-full">
                 <div class="w-full overflow-hidden laptop:min-h-1/2 relative h-full">
                     @foreach($slides as $slide)
-                        <div class="flex flex-row absolute portfolio-slide gap-x-24 h-[inherit]"
-                             data-slide-duration="{{$slide->duration}}">
+                        <div class="flex flex-row absolute portfolio-slide gap-x-24 h-[inherit]">
                             <div class="slide-content relative flex-1 flex flex-col laptop:py-2 desktop:py-16">
                                 <div class="laptop:w-5/6 desktop:w-3/4 relative">
 

@@ -1,3 +1,4 @@
+<div id="spotify"></div>
 @if($spotifyData != null)
     <div
         class="fixed group flex flex-col w-auto transition-all duration-700 tablet:hover:left-0 tablet:-left-[22.5rem] w-96 z-10 top-1/4 shadow-lg">

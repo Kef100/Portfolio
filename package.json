@@ -10,14 +10,16 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@babel/preset-react": "^7.16.7",
         "autoprefixer": "^10.4.4",
-        "axios": "^0.21",
+        "axios": "^0.24.0",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
         "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
         "postcss": "^8.4.12",
+        "react": "^18.0.0",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.0",
         "sass-loader": "^12.1.0",
@@ -28,6 +30,8 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.0",
+        "dotenv": "^16.0.1",
+        "react-dom": "^18.0.0",
         "sactivity": "^2.0.1-beta",
         "tilt.js": "^1.2.1",
         "toastr": "^2.1.4"

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class ProjectController
+class ProjectController extends SpotifyController
 {
 
     public function index()
     {
-        return view('projects');
+        $spotifyData = $this->getCurrentPlaying();
+
+        return view('projects', compact('spotifyData'));
     }
 }

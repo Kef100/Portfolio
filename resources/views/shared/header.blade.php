@@ -3,13 +3,13 @@
         <a class="logo" href="{{ url('/') }}"><span><img class="w-20" src="{{ asset('assets/files/branding/logo-banner.svg')  }}"
                                                          alt="Logo"></span></a>
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
-           href="#"><span class="block relative transition-all"
+           href="{{ url('/') }}"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.home') }}">{{ __('messages.navigation.home') }}</span></a>
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
            href="#"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.about') }}">{{ __('messages.navigation.about') }}</span></a>
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
-           href="#"><span class="block relative transition-all"
+           href="{{ url('/projects') }}"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.portfolio') }}">{{ __('messages.navigation.portfolio') }}</span></a>
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
            href="#"><span class="block relative transition-all"
@@ -20,10 +20,10 @@
                           data-title="{{ __('messages.navigation.dashboard') }}">{{ __('messages.navigation.dashboard') }}</span></a>
         @endif
         <a class="list-none laptop:text-lg desktop:text-2xl text-white bg-transparent no-underline roll-link"
-           href="#"><span class="block relative transition-all"
+           href="{{ url('/cv') }}"><span class="block relative transition-all"
                           data-title="{{ __('messages.navigation.cv') }}">{{ __('messages.navigation.cv') }}</span></a>
         <a class="primary-background primary-background-hover transition-all laptop:text-lg desktop:text-2xl border border-primary-500 rounded-full px-8 py-2 backdrop-blur"
-           href="#">
+           href="{{ url("/contact") }}">
             <span class="grid grid-flow-col items-center justify-center gap-x-4" data-title="{{ __('messages.navigation.lets_chat') }}">{{ __('messages.navigation.lets_chat') }}
                 <svg class="typing" xmlns="http://www.w3.org/2000/svg" width="35" height="12">
                   <g transform="translate(-1176 -60.907)">

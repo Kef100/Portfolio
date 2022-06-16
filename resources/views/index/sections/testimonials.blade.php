@@ -20,10 +20,9 @@
                 <div class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer">
                     <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                 </div>
-                <div id="testimonials" class="flex flex-row items-center gap-x-12 h-full overflow-y-scroll w-full">
+                <div id="testimonials" class="flex items-center gap-x-12 h-full overflow-hidden w-full">
                     @foreach($testimonials as $testimonial)
-                        <div
-                            class="relative flex flex-col flex-1 h-auto space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg">
+                        <div class="relative flex flex-col flex-1-1-0 w-full h-full space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg">
                             <div class="flex flex-row space-x-4 items-center justify-between">
                                 <div class="relative w-16 h-16 rounded-full border overflow-hidden border-gray-200 bg-gradient-to-br from-primary-300 to-primary-500">
                                     <img class="w-full h-full object-contain pt-2"

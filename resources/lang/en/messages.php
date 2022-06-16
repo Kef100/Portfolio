@@ -10,6 +10,12 @@ return [
     | The following language lines are used for the custom application
     |
     */
+    'languages' => [
+        'nl' => 'Dutch',
+        'de' => 'German',
+        'en' => 'English',
+    ],
+
     'spotify' => [
         "listening" => "Currently listening to",
         "last_listened" => "Last listened to",
@@ -101,6 +107,24 @@ return [
         'go_back' => [
             "to" => "Go back to the",
             "website" => "website",
+        ],
+    ],
+
+    'cv' => [
+        'roles' => [
+            'developer' => "Junior Software Developer",
+            'designer' => "UI/UX Designer",
+        ],
+        'information' => [
+            'residence' => [
+                'title' => "Residence",
+                'text' => "Netherlands",
+            ],
+            'province' => [
+                'title' => "Province",
+                'text' => "Gelderland",
+            ],
+            'age' => 'Age',
         ],
     ],
 ];

@@ -90,8 +90,7 @@ function showSlide(slide) {
         $(this).removeClass("active-portfolio-slide");
     });
     $(slideElement).addClass("active-portfolio-slide");
-
-    startCounter($(slideElement).attr("data-slide-duration"), slide);
+    startCounter(2500, slide);
 }
 
 function showBullet(slide) {
@@ -210,3 +209,5 @@ $("#previousSlide").click(function () {
 // $("#play").click(function () {
 //     showSlide(sliderIndex);
 // });
+
+

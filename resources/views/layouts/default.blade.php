@@ -18,7 +18,7 @@
             integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
-    <script src="{{ asset('assets/js/developer.js') }}" defer></script>
+{{--    <script src="{{ asset('assets/js/developer.js') }}" defer></script>--}}
     <script src="{{ asset('assets/js/tilt.jquery.js') }}" defer></script>
     <!-- Toastr-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

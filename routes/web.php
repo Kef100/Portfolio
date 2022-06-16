@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CvController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SpotifyController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -24,14 +26,18 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
 
 //  Home
     Route::get('/', [IndexController::class, 'index'])->name('index');
-    Route::get('/spotify', [IndexController::class, 'spotify'])->name('spotify');
-    Route::get('/spotifyCallback', [IndexController::class, 'spotifyCallback'])->name('spotify.callback');
+//Spotify
+    Route::post('/spotify/getCurrentSong', [IndexController::class, 'getCurrentPlaying'])->name('spotify.getCurrentSong');
+//    Route::get('/spotify', [SpotifyController::class, 'spotify'])->name('spotify');
+//    Route::get('/spotifyCallback', [SpotifyController::class, 'spotifyCallback'])->name('spotify.callback');
 
 // Contact
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 //  Projects
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+//cv
+    Route::get('/cv', [CvController::class, 'index'])->name('cv');
 
 
     Route::get('/admin', function () {
