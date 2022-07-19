@@ -57,6 +57,12 @@ module.exports = {
                 'contain': 'contain',
                 'full': '100% 100%',
             },
+            flexBasis: {
+                '3/10': '31%',
+            },
+            gap: {
+                '3perc': '3.3333%',
+            },
             transitionTimingFunction: {
                 'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             },
@@ -67,9 +73,6 @@ module.exports = {
                 'circle': "url('/assets/files/images/symbols/Circle.svg')",
                 'triangle': "url('/assets/files/images/symbols/triangle.svg')",
                 'cross': "url('/assets/files/images/symbols/X.svg')",
-            },
-            width: {
-                '20': '4rem',
             },
             colors: {
                 'primary': {

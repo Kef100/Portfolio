@@ -1,4 +1,4 @@
-<div class="w-full h-screen bg-testimonials bg-right bg-cover section overflow-hidden bg-[length:105%]">
+<div class="w-full h-screen bg-testimonials bg-right bg-cover section overflow-hidden bg-[length:105%] active">
     <div class="absolute -top-px bg-secondary z-10 w-full h-20 pl-6 flex justify-start items-end">
         <h1 class="absolute left-4 -top-2 font-bold century-gothic text-8xl text-gray-300/10">03</h1>
         <div class="flex flex-col">
@@ -15,48 +15,71 @@
             <h2 class="font-bold laptop:text-4xl desktop:text-5xl">{{ __("messages.homepage.testimonials.title") }}</h2>
             <h2 class="text-gray-300 laptop:text-3xl desktop:text-4xl">{{ __("messages.homepage.testimonials.subtitle") }}</h2>
         </div>
-        <div class="flex relative justify-center items-center h-full">
-            <div class="relative flex justify-between items-center w-1/2 h-full">
-                <div class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer">
+        <div class="flex flex-col gap-y-12 relative justify-center items-center h-full">
+            <div class="relative flex justify-between items-center w-3/5 h-full">
+                <div id="previousTestimony" class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer">
                     <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                 </div>
-                <div id="testimonials" class="flex items-center gap-x-12 h-full overflow-hidden w-full">
-                    @foreach($testimonials as $testimonial)
-                        <div class="relative flex flex-col flex-1-1-0 w-full h-full space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg">
-                            <div class="flex flex-row space-x-4 items-center justify-between">
-                                <div class="relative w-16 h-16 rounded-full border overflow-hidden border-gray-200 bg-gradient-to-br from-primary-300 to-primary-500">
-                                    <img class="w-full h-full object-contain pt-2"
-                                         src="{{ asset('assets/files/images/uploaded/testimonials/'.$testimonial->image) }}">
+                <div id="testimonials" class="flex flex-row items-center gap-x-3perc h-full overflow-x-scroll w-full">
+                    @foreach($testimonials as $index => $testimonial)
+                        <div onclick="goToTestimony({{$index}})" class="testimony transition-all relative basis-3/10 grow shrink-0 flex-col w-full h-full space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg{{$index == 1 ? " active-testimony" : ""}}">
+                            <div class="flex flex-col space-y-4">
+                                <div>
+                                    <div class="relative w-20 h-20 rounded-full border overflow-hidden border-gray-200 bg-gradient-to-br from-primary-300 to-primary-500">
+                                        <img class="w-full h-full object-contain pt-2"
+                                             src="{{ asset('assets/files/images/uploaded/testimonials/'.$testimonial->image) }}" alt="{{ $testimonial->author }}">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h2 class="italic font-bold text-2xl">{{ $testimonial->author }}</h2>
+                                        <p class="text-secondary century-gothic font-black text-xl">{{ $testimonial->expertise }}</p>
+                                    </div>
                                 </div>
-                                <div class="flex-1">
-                                    <h2 class="italic font-bold text-2xl">{{ $testimonial->author }}</h2>
-                                    <p class="text-secondary century-gothic font-black text-xl">{{ $testimonial->expertise }}</p>
+
+                                <div class="w-full h-1 bg-secondary rounded-full">
+                                    <div
+                                        class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
                                 </div>
-                            </div>
 
-                            <div class="w-full h-1 bg-secondary rounded-full">
-                                <div
-                                    class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
+                                <p class="leading-relaxed font-light text-lg">
+                                    <span class="text-primary-400 text-xl engraves-mt">"</span>{{ $testimonial->testimonial }}<span class="text-primary-400 text-xl engraves-mt">"</span>
+                                </p>
                             </div>
-
-                            <p class="leading-relaxed font-light text-lg"><span
-                                    class="text-primary-400 text-xl engraves-mt">"</span>{{ $testimonial->testimonial }}
-                                <span class="text-primary-400 text-xl engraves-mt">"</span></p>
+                            <div class="flex">
+                                <h3 class="font-bold century-gothic text-8xl relative text-gray-300/10 transition-all duration-700 ease-in-out">
+                                    0{{ $index + 1 }}
+                                </h3>
+                            </div>
                         </div>
                     @endforeach
                 </div>
-                <div class="absolute -right-16 hover:opacity-60 transition-all cursor-pointer">
+                <div id="nextTestimony" class="absolute -right-16 hover:opacity-60 transition-all cursor-pointer">
                     <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
                 </div>
             </div>
-        </div>
-        <div>
-            <a href="{{ url("/testimonials") }}"
-               class="group inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
-                <p>{{__("messages.homepage.testimonials.slider.view_all")}}</p>
-                <img class="scale-75 group-hover:pl-2 transition-all"
-                     src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
-            </a>
+            <div class="w-full h-auto flex flex-row justify-center items-center gap-x-4">
+                <ul class="flex flex-row justify-center items-center gap-x-4">
+                    @for($i = 1; $i <= count($testimonials) / 3; $i++)
+                        <li onclick="nextTestimony({{$i}})" class="before:content-[''] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:w-1 before:h-1 before:overflow-hidden before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2
+                        relative h-8 w-8 p-0.5 flex justify-center items-center testimony-bullet bullet {{$i == 1 ? " bullet-active" : ""}}">
+                            <svg id="circle" y="0" x="0" width="100%" height="100%"
+                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <circle id="outline" fill="none" stroke-width="1" stroke="#fff" stroke-linecap="round"
+                                        cx="10" cy="10" r="9"/>
+                                <circle class="stroke-primary-500" id="inline" fill="none" stroke-width="1.75"
+                                        stroke-linecap="round" cx="10" cy="10" r="9"/>
+                            </svg>
+                        </li>
+                    @endfor
+                </ul>
+            </div>
+            <div>
+                <a href="{{ url("/testimonials") }}"
+                   class="group inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
+                    <p>{{__("messages.homepage.testimonials.slider.view_all")}}</p>
+                    <img class="scale-75 group-hover:pl-2 transition-all"
+                         src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                </a>
+            </div>
         </div>
     </div>
     <svg class="absolute fill-secondary -bottom-px" x="0" y="0" width="100%" height="110"

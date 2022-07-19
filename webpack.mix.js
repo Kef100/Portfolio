@@ -21,6 +21,7 @@ mix.options({processCssUrls: true,})
         require("tailwindcss"),
     ])
     .sass('resources/assets/scss/custom.scss', 'public/assets/css')
+    //Causes error
     // .copy('resources/assets/files', 'public/assets/files')
     .version()
     .disableNotifications()

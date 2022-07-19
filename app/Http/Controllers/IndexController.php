@@ -12,7 +12,7 @@ class IndexController extends SpotifyController
     {
         $slides = Portfolio::take(4)->orderBy('created_at', 'desc')->get();
         $preferences = Preference::take(3)->orderBy('created_at', 'desc')->get();
-        $testimonials = Testimonial::take(4)->orderBy('created_at', 'desc')->get();
+        $testimonials = Testimonial::take(6)->orderBy('created_at', 'desc')->get();
 
         $spotifyData = $this->getCurrentPlaying();
 

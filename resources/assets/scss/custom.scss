@@ -28,6 +28,37 @@ html {
     display: none;
 }
 
+///////////////////////////
+//////Typewriter///////////
+///////////////////////////
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid gray; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink .75s step-end infinite;
+    animation-play-state: paused;
+}
+
+.typewriter-start{
+    animation-play-state: running;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: gray; }
+}
+
 
 ///////////////////////////
 ///////Spotify Styles//////
@@ -127,13 +158,13 @@ html {
     stroke-linejoin: round;
 }
 
-.portfolio-bullet svg {
+.bullet svg {
     transition: transform 300ms;
     transform: rotate(-90deg) scale(0);
 
 }
 
-.portfolio-bullet:before {
+.bullet:before {
     transition: opacity 250ms ease;
     opacity: 1;
 }
@@ -146,6 +177,19 @@ html {
 .bullet-active:before {
     transition: opacity 250ms ease;
     opacity: 0;
+}
+
+///////////////////////////
+////Testimonial Styles/////
+///////////////////////////
+.testimony{
+    transform: scale(0.9);
+}
+.active-testimony {
+    transform: scale(1);
+    h3{
+        color: rgba(133, 120, 82, 0.6);
+    }
 }
 
 ///////////////////////////

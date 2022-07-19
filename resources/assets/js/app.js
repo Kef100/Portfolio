@@ -1,8 +1,11 @@
 //Slider Variables
 let sliderIndex = 1;
+let testimonyIndex = 1;
 const inner = $("#circle #inline");
 const slides = $(".portfolio-slide");
-const bullets = $(".portfolio-bullet");
+const testimonials= $(".testimony");
+const portfolio_bullets = $(".portfolio-bullet");
+const testimonial_bullets = $(".testimony-bullet");
 let interval;
 let i = 0;
 const pi = 3.14;
@@ -63,7 +66,7 @@ function startFullpage() {
                 if (destination.index === 3) {
                     //Portfolio section
                     showSlide(sliderIndex);
-                    showBullet(sliderIndex - 1);
+                    showPortfolioBullet(sliderIndex - 1);
                 }
             },
             onLeave: function (origin, destination) {
@@ -77,10 +80,9 @@ function startFullpage() {
 }
 
 //Slider & Circle
-bullets.each(function() {
+portfolio_bullets.each(function() {
     $(this).find("svg circle:nth-child(2)").css("stroke-dasharray", dasharray);
     $(this).find("svg circle:nth-child(2)").css("stroke-dashoffset", dasharray);
-
 });
 
 function showSlide(slide) {
@@ -93,9 +95,9 @@ function showSlide(slide) {
     startCounter(2500, slide);
 }
 
-function showBullet(slide) {
-    let nextBullet = bullets.get(slide);
-    bullets.each(function() {
+function showPortfolioBullet(slide) {
+    let nextBullet = portfolio_bullets.get(slide);
+    portfolio_bullets.each(function() {
         $(this).removeClass("bullet-active");
     });
     $(nextBullet).addClass("bullet-active");
@@ -103,7 +105,7 @@ function showBullet(slide) {
 
 function nextSlide(slide) {
     showSlide(slide + 1);
-    showBullet(slide);
+    showPortfolioBullet(slide);
     sliderIndex++;
 }
 
@@ -136,7 +138,7 @@ function fadeSlide(slide) {
 
 
 function startCounter(time, slide) {
-    let bullet = bullets.get(slide - 1);
+    let bullet = portfolio_bullets.get(slide - 1);
     let isFading = false;
 
     interval = setInterval(function () {
@@ -202,6 +204,66 @@ $("#previousSlide").click(function () {
     }
 });
 
+function showTestimonyBullet(testimony) {
+    let nextBullet = testimonial_bullets.get(testimony);
+    testimonial_bullets.each(function() {
+        $(this).removeClass("bullet-active");
+    });
+    $(nextBullet).addClass("bullet-active");
+}
+
+function nextTestimony(testimony) {
+    showTestimony((testimony - 1) * 3);
+    showTestimonyBullet(testimony - 1);
+    sliderIndex++;
+}
+
+function showTestimony(testimony) {
+    let slideElement = testimonials.get(testimony);
+    testimonials.each(function() {
+        $(this).removeClass("active-testimony");
+    });
+    scrollToTestimony(slideElement);
+    $(slideElement).addClass("active-testimony");
+}
+
+function goToTestimony(testimony){
+    testimonyIndex = testimony;
+    showTestimony(testimony);
+    showTestimonyBullet(Math.floor(testimony / 3));
+}
+
+function scrollToTestimony(testimony){
+    console.log(testimony.offsetLeft);
+    $("#testimonials").animate({scrollLeft: testimony.offsetLeft}, 500);
+}
+
+
+$("#nextTestimony").click(function (){
+    if((testimonyIndex + 1) >= (testimonials.length)){
+        testimonyIndex = 0;
+        showTestimony(testimonyIndex);
+        showTestimonyBullet(testimonyIndex);
+    }else{
+        testimonyIndex++;
+        showTestimony(testimonyIndex);
+        showTestimonyBullet(Math.floor(testimonyIndex / 3));
+    }
+});
+
+$("#previousTestimony").click(function (){
+    if((testimonyIndex - 1) < 0){
+        testimonyIndex = testimonials.length - 1;
+        showTestimony(testimonyIndex);
+        showTestimonyBullet(Math.floor(testimonyIndex / 3));
+    }else{
+        testimonyIndex--;
+        showTestimony(testimonyIndex);
+        showTestimonyBullet(Math.floor(testimonyIndex / 3));
+    }
+});
+
+
 // $("#pause").click(function () {
 //     clearInterval(interval);
 // });
@@ -209,5 +271,4 @@ $("#previousSlide").click(function () {
 // $("#play").click(function () {
 //     showSlide(sliderIndex);
 // });
-
 

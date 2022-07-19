@@ -51,7 +51,7 @@
                     <ul class="flex flex-row justify-center items-center gap-x-4">
                         @foreach($slides as $key => $bullet)
                             <li onclick="goToSlide({{$key + 1}})" class="before:content-[''] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:w-1 before:h-1 before:overflow-hidden before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2
-                        relative h-8 w-8 p-0.5 flex justify-center items-center portfolio-bullet bullet-active">
+                        relative h-8 w-8 p-0.5 flex justify-center items-center portfolio-bullet bullet{{$key == 0 ? " bullet-active" : ""}}">
                                 <svg id="circle" y="0" x="0" width="100%" height="100%"
                                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <circle id="outline" fill="none" stroke-width="1" stroke="#fff" stroke-linecap="round"

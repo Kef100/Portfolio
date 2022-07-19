@@ -75,7 +75,7 @@
                 <div>
                     <div class="flex flex-col gap-y-3 my-4">
                         <p class="flex items-center gap-x-2"><i class="text-primary fa-solid fa-check"></i> Javascript Frameworks</p>
-                        <p class="flex items-center gap-x-2"><i class="text-primary fa-solid fa-check"></i> GIT Knowledge</p>
+                        <p class="flex items-center gap-x-2"><i class="text-primary fa-solid fa-check"></i> GIT</p>
                         <p class="flex items-center gap-x-2"><i class="text-primary fa-solid fa-check"></i> OOPD Development</p>
                         <p class="flex items-center gap-x-2"><i class="text-primary fa-solid fa-check"></i> MVC Frameworks</p>
                     </div>
@@ -93,10 +93,36 @@
             </div>
         </div>
         <div class="relative w-full min-h-screen h-full bg-secondary-700">
-            test
+            <div class="flex flex-col gap-y-6 mx-32 my-10">
+                <div class="relative w-full rounded-t-2xl overflow-hidden h-full bg-landing bg-cover bg-bottom">
+                    <div class="p-6 flex gap-x-10">
+                        <div class="w-full h-full flex gap-x-10">
+                            <img class="w-16 self-start z-20" src="{{ asset("assets/files/branding/favicon.svg") }}" alt="road to mountains">
+                            <div class="flex flex-col justify-between gap-y-10 mt-16">
+                                <h1 class="text-6xl font-bold z-20">Discover the road <br> of my Career!</h1>
+                                <h4 id="typewriter" class="text-2xl z-20 typewriter">&lt;<span class="text-primary-300">code</span>&gt; I build websites and software &lt;/<span class="text-primary-300">code</span>&gt;</h4>
+                                <a href="{{ url("/projects") }}"
+                                   class="z-20 primary-background primary-background-hover w-fit inline-flex gap-x-2 hover:gap-x-6 transition-all z-20 laptop:text-lg desktop:text-xl border border-primary-500 rounded-full px-8 py-2 backdrop-blur">
+                                   Explore now!
+                                    -
+                                </a>
+                            </div>
+                        </div>
+{{--                        <img class="w-full h-full z-20" src="{{ asset("assets/files/images/profile/profile-standing.png") }}" alt="picture of me standing"/>--}}
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full bg-black/25 z-10 backdrop-blur-sm"></div>
+                </div>
+            </div>
         </div>
-        <div class="sticky right-0 top-0 w-auto min-h-screen h-full bg-secondary-500">
-            test
+        <div class="sticky flex flex-col right-0 top-0 w-auto min-h-screen h-full bg-secondary-500">
+            <a class="group" href="{{ url("/") }}">
+                <div class="p-4 text-2xl text-white/50 group-hover:text-white/25 transition-all bg-secondary-400">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="text-xl mt-7 text-secondary-100 group-hover:text-secondary-200 transition-all transform rotate-90">
+                    HOME
+                </div>
+            </a>
         </div>
     </div>
 @endsection

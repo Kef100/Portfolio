@@ -8,13 +8,17 @@
         </div>
         <div class="flex gap-x-32 justify-center items-center flex-row">
             <a href="{{ url("/projects") }}"
-               class="primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-500 rounded-full px-8 py-2 backdrop-blur">
-                {{__("messages.homepage.landing.latest_projects")}}
+               class="group relative inline-flex z-20 w-fit justify-center gap-x-3 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                <p>{{__("messages.homepage.landing.latest_projects")}}</p>
+                <img class="scale-[60%] group-hover:pl-2 transition-all"
+                     src="{{ asset('assets/files/images/arrows/arrow.svg') }}" alt="arrow">
             </a>
 
             <a href="{{ url("/contact") }}"
-               class="secondary-background secondary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-gray-200 rounded-full px-8 py-2 backdrop-blur">
-                {{__("messages.homepage.landing.get_in_touch")}}
+               class="group relative inline-flex z-20 w-fit justify-center gap-x-3 items-center secondary-background secondary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full px-4 py-2 backdrop-blur">
+                <p>{{__("messages.homepage.landing.get_in_touch")}}</p>
+                <img class="scale-[60%] group-hover:pl-2 transition-all"
+                     src="{{ asset('assets/files/images/arrows/arrow.svg') }}" alt="arrow">
             </a>
         </div>
     </div>
