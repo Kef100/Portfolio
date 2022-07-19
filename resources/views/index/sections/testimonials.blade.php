@@ -1,4 +1,4 @@
-<div class="w-full h-screen bg-testimonials bg-right bg-cover section overflow-hidden bg-[length:105%] active">
+<div class="w-full h-screen bg-testimonials bg-right bg-cover section overflow-hidden">
     <div class="absolute -top-px bg-secondary z-10 w-full h-20 pl-6 flex justify-start items-end">
         <h1 class="absolute left-4 -top-2 font-bold century-gothic text-8xl text-gray-300/10">03</h1>
         <div class="flex flex-col">

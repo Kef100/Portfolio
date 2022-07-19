@@ -94,7 +94,7 @@
         </div>
         <div class="relative w-full min-h-screen h-full bg-secondary-700">
             <div class="flex flex-col gap-y-6 mx-32 my-10">
-                <div class="relative w-full rounded-t-2xl overflow-hidden h-full bg-landing bg-cover bg-bottom">
+                <div class="relative w-full rounded-t-2xl h-full bg-landing bg-cover bg-bottom">
                     <div class="p-6 flex gap-x-10">
                         <div class="w-full h-full flex gap-x-10">
                             <img class="w-16 self-start z-20" src="{{ asset("assets/files/branding/favicon.svg") }}" alt="road to mountains">
@@ -104,11 +104,12 @@
                                 <a href="{{ url("/projects") }}"
                                    class="z-20 primary-background primary-background-hover w-fit inline-flex gap-x-2 hover:gap-x-6 transition-all z-20 laptop:text-lg desktop:text-xl border border-primary-500 rounded-full px-8 py-2 backdrop-blur">
                                    Explore now!
-                                    -
                                 </a>
                             </div>
                         </div>
-{{--                        <img class="w-full h-full z-20" src="{{ asset("assets/files/images/profile/profile-standing.png") }}" alt="picture of me standing"/>--}}
+                        <div class="w-full flex justify-center relative">
+                            <img class="absolute -bottom-6 w-[43%] h-auto z-20 drop-shadow-dark-xl" src="{{ asset("assets/files/images/profile/profile-standing.png") }}" alt="picture of me standing"/>
+                        </div>
                     </div>
                     <div class="absolute top-0 left-0 w-full h-full bg-black/25 z-10 backdrop-blur-sm"></div>
                 </div>

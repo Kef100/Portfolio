@@ -63,6 +63,9 @@ module.exports = {
             gap: {
                 '3perc': '3.3333%',
             },
+            dropShadow: {
+                "dark-xl": "0px 0px 20px rgba(0, 0, 0, 0.5)",
+            },
             transitionTimingFunction: {
                 'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             },
