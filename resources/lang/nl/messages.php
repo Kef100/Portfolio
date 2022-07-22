@@ -128,4 +128,17 @@ return [
             'age' => 'Leeftijd',
         ],
     ],
+
+    'footer' => [
+        'subtitle' => "Ik ben een web developer en designer. Op het moment werk ik voor <a class='text-primary-300' href=':url'>Mr Smith</a>.",
+        'socials' => [
+            'title' => "Sociale Media",
+        ],
+        'pages' => [
+            'title' => "Pagina's",
+        ],
+        'projects' => [
+            'title' => "Projecten",
+        ],
+    ]
 ];

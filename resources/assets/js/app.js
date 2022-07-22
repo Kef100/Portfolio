@@ -11,6 +11,10 @@ let i = 0;
 const pi = 3.14;
 const dasharray = 2 * inner.attr("r") * pi;
 
+//Copyright
+const copyright = $("#copyright");
+copyright.text(new Date().getFullYear());
+
 //Preloader Variables
 const progressBar = $("#percentage");
 let duration = 1000;
@@ -113,7 +117,7 @@ function previousSlide(slide) {
     if (slide >= 1) {
         sliderIndex--;
         showSlide(sliderIndex);
-        showBullet(sliderIndex - 1);
+        showPortfolioBullet(sliderIndex - 1);
     }
 }
 
@@ -124,7 +128,7 @@ function goToSlide(slide) {
         fadeSlide(sliderIndex - 1);
         setTimeout(function () {
             showSlide(slide);
-            showBullet(slide - 1);
+            showPortfolioBullet(slide - 1);
         }, 1000);
         sliderIndex = slide;
     }
@@ -234,7 +238,6 @@ function goToTestimony(testimony){
 }
 
 function scrollToTestimony(testimony){
-    console.log(testimony.offsetLeft);
     $("#testimonials").animate({scrollLeft: testimony.offsetLeft}, 500);
 }
 

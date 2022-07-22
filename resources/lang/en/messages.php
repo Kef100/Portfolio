@@ -94,7 +94,7 @@ return [
             'title' => "What Customers Say",
             'subtitle' => "What customers say about me",
             'slider' => [
-                'view_all' => "View all reviews",
+                'view_all' => "View all testimonials",
             ]
         ],
     ],
@@ -127,4 +127,17 @@ return [
             'age' => 'Age',
         ],
     ],
+
+    'footer' => [
+        'subtitle' => "I'm a web developer and designer. I'm currently working for <a class='text-primary-300' href=':url'>Mr Smith</a>.",
+        'socials' => [
+            'title' => "Social Media",
+        ],
+        'pages' => [
+            'title' => "Pages",
+        ],
+        'projects' => [
+            'title' => "Projects",
+        ],
+    ]
 ];

@@ -1,4 +1,4 @@
-<div class="w-full h-screen bg-testimonials bg-right bg-cover section overflow-hidden">
+<div class="w-full max-h-screen h-screen bg-testimonials bg-right bg-cover section overflow-hidden bg-[length:105%]">
     <div class="absolute -top-px bg-secondary z-10 w-full h-20 pl-6 flex justify-start items-end">
         <h1 class="absolute left-4 -top-2 font-bold century-gothic text-8xl text-gray-300/10">03</h1>
         <div class="flex flex-col">
@@ -15,14 +15,14 @@
             <h2 class="font-bold laptop:text-4xl desktop:text-5xl">{{ __("messages.homepage.testimonials.title") }}</h2>
             <h2 class="text-gray-300 laptop:text-3xl desktop:text-4xl">{{ __("messages.homepage.testimonials.subtitle") }}</h2>
         </div>
-        <div class="flex flex-col gap-y-12 relative justify-center items-center h-full">
+        <div class="flex flex-col gap-y-8 relative justify-center items-center h-full">
             <div class="relative flex justify-between items-center w-3/5 h-full">
                 <div id="previousTestimony" class="absolute -left-16 rotate-180 hover:opacity-60 transition-all cursor-pointer">
-                    <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                    <img src="{{ asset('assets/files/images/arrows/arrow.svg') }}" alt="arrow">
                 </div>
                 <div id="testimonials" class="flex flex-row items-center gap-x-3perc h-full overflow-x-scroll w-full">
                     @foreach($testimonials as $index => $testimonial)
-                        <div onclick="goToTestimony({{$index}})" class="testimony transition-all relative basis-3/10 grow shrink-0 flex-col w-full h-full space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg{{$index == 1 ? " active-testimony" : ""}}">
+                        <div onclick="goToTestimony({{$index}})" class="testimony hover:cursor-pointer transition-all relative basis-3/10 grow shrink-0 flex-col w-full h-full space-y-4 secondary-alt-background border-2 border-gray-500 px-10 py-6 rounded-3xl backdrop-blur-lg{{$index == 1 ? " active-testimony" : ""}}">
                             <div class="flex flex-col space-y-4">
                                 <div>
                                     <div class="relative w-20 h-20 rounded-full border overflow-hidden border-gray-200 bg-gradient-to-br from-primary-300 to-primary-500">
@@ -40,8 +40,8 @@
                                         class="w-1/2 rounded-full h-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
                                 </div>
 
-                                <p class="leading-relaxed font-light text-lg">
-                                    <span class="text-primary-400 text-xl engraves-mt">"</span>{{ $testimonial->testimonial }}<span class="text-primary-400 text-xl engraves-mt">"</span>
+                                <p class="leading-relaxed font-light text-xl">
+                                    <span class="text-primary-400 text-2xl engraves-mt">"</span>{{ $testimonial->testimonial }}<span class="text-primary-400 text-2xl engraves-mt">"</span>
                                 </p>
                             </div>
                             <div class="flex">
@@ -77,7 +77,7 @@
                    class="group inline-flex w-fit justify-center space-x-2 items-center primary-background primary-background-hover transition-all z-20 laptop:text-lg desktop:text-2xl border border-primary-200 rounded-full laptop:px-4 desktop:px-8 py-2 backdrop-blur">
                     <p>{{__("messages.homepage.testimonials.slider.view_all")}}</p>
                     <img class="scale-75 group-hover:pl-2 transition-all"
-                         src="{{ asset('assets/files/images/arrows/arrow.svg') }}">
+                         src="{{ asset('assets/files/images/arrows/arrow.svg') }}" alt="arrow">
                 </a>
             </div>
         </div>
